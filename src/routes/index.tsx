@@ -52,7 +52,7 @@ function useCountUp(target: number, suffix = "") {
     if (!el) return;
     const io = new IntersectionObserver(
       (entries) => {
-        if (!entries[0].isIntersecting || started.current) return;
+        if (!entries[0]?.isIntersecting || started.current) return;
         started.current = true;
         const duration = 1600;
         const start = performance.now();
