@@ -11,12 +11,16 @@ type SmoothImageProps = Omit<React.ImgHTMLAttributes<HTMLImageElement>, "src"> &
   priority?: boolean;
   /** Distance from the viewport at which loading starts. */
   rootMargin?: string;
+  /** Tiny low-res version shown blurred until the full image decodes. */
+  placeholder?: string;
+  /** Object-position utility applied to the placeholder, e.g. "object-top". */
+  objectPosition?: string;
 };
 
 /**
  * Image that only starts downloading when it approaches the viewport
- * (IntersectionObserver), showing a shimmering skeleton until decoded
- * and then cross-fading in.
+ * (IntersectionObserver), showing a blurred thumbnail (or shimmering
+ * skeleton) until decoded and then cross-fading in.
  */
 export function SmoothImage({
   src,
@@ -25,6 +29,8 @@ export function SmoothImage({
   className,
   priority = false,
   rootMargin = "300px",
+  placeholder,
+  objectPosition,
   onLoad,
   ...props
 }: SmoothImageProps) {
@@ -65,13 +71,27 @@ export function SmoothImage({
       className={cn("relative overflow-hidden", wrapperClassName)}
       style={ratio && !loaded ? { aspectRatio: ratio } : undefined}
     >
-      <div
-        aria-hidden
-        className={cn(
-          "skeleton-shimmer absolute inset-0 transition-opacity duration-700",
-          loaded ? "opacity-0" : "opacity-100",
-        )}
-      />
+      {placeholder ? (
+        <img
+          aria-hidden
+          src={placeholder}
+          alt=""
+          className={cn(
+            "absolute inset-0 h-full w-full scale-110 object-cover blur-xl transition-opacity duration-700",
+            objectPosition,
+            loaded ? "opacity-0" : "opacity-100",
+          )}
+        />
+      ) : (
+        <div
+          aria-hidden
+          className={cn(
+            "skeleton-shimmer absolute inset-0 transition-opacity duration-700",
+            loaded ? "opacity-0" : "opacity-100",
+          )}
+        />
+      )}
+
       {inView ? (
         <img
           ref={imgRef}
