@@ -20,7 +20,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Bianca Pires (@bianncapires): mais de 12 mil seguidores no Instagram com conteúdo de fé, rotina e humor. Publis e parcerias que geram conexão real.",
+          "Bianca Pires (@bianncapires): mais de 9 mil seguidores no Instagram com conteúdo de fé, rotina e humor. Publis e parcerias que geram conexão real.",
       },
       {
         property: "og:title",
@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Cristã, rotina e humor. 312 publicações e uma comunidade engajada de 12.5K seguidores. Parcerias com marcas que querem proximidade e confiança.",
+          "Cristã, rotina e humor. 231 publicações e uma comunidade engajada de 9.132 seguidores. Parcerias com marcas que querem proximidade e confiança.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -104,7 +104,7 @@ function Hero() {
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-dark to-transparent" />
       </div>
       <div className="float-soft relative -mt-16 ml-0 w-fit bg-rose-soft px-7 py-4 text-ink shadow-[0_18px_40px_-24px_rgba(0,0,0,0.7)]">
-        <p className="font-display text-2xl leading-none">12.5K</p>
+        <p className="font-display text-2xl leading-none">9.1K</p>
         <p className="mt-1 text-[0.65rem] tracking-[0.18em] uppercase">
           Seguidores
         </p>
@@ -138,9 +138,9 @@ function Hero() {
 
           <Reveal as="dl" delay={440} className="mt-14 grid grid-cols-3 gap-2">
             {[
-              ["12.500", "Seguidores"],
-              ["312", "Publicações"],
-              ["1.2K", "Seguindo"],
+              ["9.132", "Seguidores"],
+              ["231", "Publicações"],
+              ["942", "Seguindo"],
             ].map(([n, l]) => (
 
               <div key={l}>
@@ -217,8 +217,8 @@ function Sobre() {
 }
 
 const numeros: [string, string, string][] = [
-  ["Instagram", "12.500", "Seguidores"],
-  ["Instagram", "312", "Publicações"],
+  ["Instagram", "9.132", "Seguidores"],
+  ["Instagram", "231", "Publicações"],
   ["Instagram · Reels", "Alto", "Alcance orgânico"],
   ["Instagram · Stories", "Diário", "Presença nos stories"],
 ];
