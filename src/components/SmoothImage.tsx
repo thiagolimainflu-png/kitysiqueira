@@ -2,33 +2,66 @@ import { useEffect, useRef, useState } from "react";
 
 import { cn } from "@/lib/utils";
 
-type SmoothImageProps = React.ImgHTMLAttributes<HTMLImageElement> & {
+type SmoothImageProps = Omit<React.ImgHTMLAttributes<HTMLImageElement>, "src"> & {
+  src: string;
   /** Aspect ratio reserved for the skeleton, e.g. "4 / 5". */
   ratio?: string;
   wrapperClassName?: string;
+  /** Load immediately (LCP image), skipping the viewport observer. */
+  priority?: boolean;
+  /** Distance from the viewport at which loading starts. */
+  rootMargin?: string;
 };
 
 /**
- * Image that shows a shimmering skeleton until the file is decoded,
- * then cross-fades in for a smoother perceived load.
+ * Image that only starts downloading when it approaches the viewport
+ * (IntersectionObserver), showing a shimmering skeleton until decoded
+ * and then cross-fading in.
  */
 export function SmoothImage({
+  src,
   ratio,
   wrapperClassName,
   className,
+  priority = false,
+  rootMargin = "300px",
   onLoad,
   ...props
 }: SmoothImageProps) {
-  const ref = useRef<HTMLImageElement>(null);
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const imgRef = useRef<HTMLImageElement>(null);
+  const [inView, setInView] = useState(priority);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
+    if (priority || inView) return;
+    const node = wrapperRef.current;
+    if (!node) return;
+    if (typeof IntersectionObserver === "undefined") {
+      setInView(true);
+      return;
+    }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          setInView(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin },
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [priority, inView, rootMargin]);
+
+  useEffect(() => {
     // Cached images can finish before React attaches the handler.
-    if (ref.current?.complete) setLoaded(true);
-  }, []);
+    if (inView && imgRef.current?.complete) setLoaded(true);
+  }, [inView]);
 
   return (
     <div
+      ref={wrapperRef}
       className={cn("relative overflow-hidden", wrapperClassName)}
       style={ratio && !loaded ? { aspectRatio: ratio } : undefined}
     >
@@ -39,19 +72,24 @@ export function SmoothImage({
           loaded ? "opacity-0" : "opacity-100",
         )}
       />
-      <img
-        ref={ref}
-        {...props}
-        onLoad={(e) => {
-          setLoaded(true);
-          onLoad?.(e);
-        }}
-        className={cn(
-          "transition-[opacity,transform,filter] duration-700 ease-out",
-          loaded ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-md scale-[1.02]",
-          className,
-        )}
-      />
+      {inView ? (
+        <img
+          ref={imgRef}
+          src={src}
+          decoding="async"
+          fetchPriority={priority ? "high" : "auto"}
+          {...props}
+          onLoad={(e) => {
+            setLoaded(true);
+            onLoad?.(e);
+          }}
+          className={cn(
+            "transition-[opacity,transform,filter] duration-700 ease-out",
+            loaded ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-md scale-[1.02]",
+            className,
+          )}
+        />
+      ) : null}
     </div>
   );
 }
