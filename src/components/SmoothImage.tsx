@@ -11,12 +11,16 @@ type SmoothImageProps = Omit<React.ImgHTMLAttributes<HTMLImageElement>, "src"> &
   priority?: boolean;
   /** Distance from the viewport at which loading starts. */
   rootMargin?: string;
+  /** Tiny low-res version shown blurred until the full image decodes. */
+  placeholder?: string;
+  /** Object-position utility applied to the placeholder, e.g. "object-top". */
+  objectPosition?: string;
 };
 
 /**
  * Image that only starts downloading when it approaches the viewport
- * (IntersectionObserver), showing a shimmering skeleton until decoded
- * and then cross-fading in.
+ * (IntersectionObserver), showing a blurred thumbnail (or shimmering
+ * skeleton) until decoded and then cross-fading in.
  */
 export function SmoothImage({
   src,
@@ -25,6 +29,8 @@ export function SmoothImage({
   className,
   priority = false,
   rootMargin = "300px",
+  placeholder,
+  objectPosition,
   onLoad,
   ...props
 }: SmoothImageProps) {
