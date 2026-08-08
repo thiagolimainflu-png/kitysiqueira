@@ -9,7 +9,6 @@ import { WhatsAppFab, WHATSAPP_URL } from "@/components/WhatsAppFab";
 import heroImg from "@/assets/hero-melissa.jpg";
 import heroThumb from "@/assets/hero-melissa-thumb.jpg";
 import sobreImg from "@/assets/sobre-melissa.jpg";
-import tabelaImg from "@/assets/tabela-melissa.jpg";
 import metricasInstagram from "@/assets/metricas-instagram.jpg";
 import metricasTiktok from "@/assets/metricas-tiktok.jpg";
 
@@ -442,110 +441,6 @@ function Parceria() {
 }
 
 
-const avulsas = [
-  "1 Storie mostrando o produto",
-  "2 Stories mostrando o produto",
-  "3 Stories mostrando o produto",
-  "1 TikTok",
-  "1 Foto no feed com o produto",
-  "Reels com o produto",
-];
-
-const combos = [
-  "1 Foto no feed + 1 Storie",
-  "Reels + 1 Storie",
-  "1 Reels + 2 Stories",
-  "1 Foto no feed + 2 Stories",
-];
-
-function PriceCard({ label }: { label: string }) {
-  return (
-    <Reveal as="li" className="lift bg-card px-6 py-7">
-      <p className="text-sm text-muted-foreground">{label}</p>
-      <CtaWhats className="mt-6 bg-rose text-white">Consultar valor →</CtaWhats>
-    </Reveal>
-  );
-}
-
-function GroupTitle({ children }: { children: string }) {
-  return (
-    <div className="mt-14 mb-6 grid grid-cols-[auto_minmax(0,1fr)] items-center gap-4">
-      <p className="text-[0.62rem] tracking-[0.22em] text-rose uppercase">
-        {children}
-      </p>
-      <span className="h-px w-full bg-border" />
-    </div>
-  );
-}
-
-function Investimento() {
-  return (
-    <section id="investimento" className="bg-cream-deep px-5 py-16 sm:px-8">
-      <div className="mx-auto max-w-3xl">
-        <Reveal variant="scale" className="img-frame">
-          <SmoothImage
-            src={tabelaImg}
-            alt="Melissa Costa em camisa rosa ao lado de uma arara de roupas"
-            ratio="4 / 5"
-            className="w-full object-cover"
-          />
-        </Reveal>
-
-        <Reveal className="mt-12">
-          <Eyebrow>Investimento</Eyebrow>
-          <h2 className="mt-6 font-display text-3xl sm:text-5xl">
-            Tabela de Valores
-          </h2>
-          <p className="mt-3 font-display text-sm italic text-muted-foreground">
-            Formatos pensados para gerar resultado real.
-          </p>
-          <p className="mt-7 flex items-center gap-3 text-xs text-muted-foreground">
-            <span className="h-2 w-2 shrink-0 rounded-full bg-rose" />
-            Agenda com poucas datas disponíveis em maio
-          </p>
-          <CtaWhats className="mt-6 bg-rose text-white">
-            Fechar parceria
-          </CtaWhats>
-        </Reveal>
-
-        <GroupTitle>Publicações avulsas</GroupTitle>
-        <ul className="space-y-4">
-          {avulsas.map((a) => (
-            <PriceCard key={a} label={a} />
-          ))}
-        </ul>
-
-        <GroupTitle>Combos estratégicos</GroupTitle>
-        <ul className="space-y-4">
-          {combos.map((c) => (
-            <PriceCard key={c} label={c} />
-          ))}
-        </ul>
-
-        <Reveal as="article" className="band-dark lift mt-14 px-6 py-10">
-          <p className="text-[0.62rem] tracking-[0.22em] text-rose-soft uppercase">
-            Melhor custo-benefício
-          </p>
-          <h3 className="mt-5 font-display text-3xl">Contrato Mensal</h3>
-          <p className="mt-5 text-sm leading-relaxed text-dark-muted">
-            2 Reels ou 1 Reels + 1 TikTok · 1 Foto no feed · 1 Storie semanal
-          </p>
-          <p className="mt-7 flex items-center gap-3 border border-white/15 px-4 py-3 text-[0.62rem] tracking-[0.16em] text-rose-soft uppercase">
-            <span className="h-2 w-2 shrink-0 rounded-full bg-rose" />
-            Apenas 2 vagas disponíveis em maio
-          </p>
-          <CtaWhats className="mt-7 bg-whats text-white">
-            Consultar valor →
-          </CtaWhats>
-          <p className="mt-5 text-center text-[0.62rem] tracking-[0.22em] text-dark-muted uppercase">
-            Resposta em minutos
-          </p>
-        </Reveal>
-      </div>
-    </section>
-  );
-}
-
 const diferenciais: [string, string][] = [
   ["🎯", "Conteúdo estratégico que vende"],
   ["✨", "Produção estética de alto nível"],
@@ -709,7 +604,6 @@ function Home() {
         <Numeros />
         <Audiencia />
         <Parceria />
-        <Investimento />
         <Diferenciais />
         <Portfolio />
         <Contato />
