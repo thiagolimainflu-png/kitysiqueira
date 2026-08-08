@@ -261,28 +261,9 @@ function Numeros() {
         </div>
 
         <p className="mt-10 text-center font-display text-sm italic text-dark-muted">
-          Números que mostram alcance. Resultado que mostram impacto.
+          Comunidade pequena no número, gigante na confiança.
         </p>
 
-        <div className="mt-14">
-          <p className="text-center text-[0.6rem] tracking-[0.22em] text-dark-muted uppercase">
-            Painel de métricas · Dados reais
-          </p>
-          <div className="mt-6 space-y-6">
-            <Reveal variant="scale" className="img-frame"><SmoothImage
-              src={metricasInstagram}
-              alt="Painel de analytics do Instagram e TikTok de Melissa Costa"
-                ratio="4 / 3"
-              className="w-full"
-            /></Reveal>
-            <Reveal variant="scale" delay={120} className="img-frame"><SmoothImage
-              src={metricasTiktok}
-              alt="Métricas de engajamento, alcance e impressões do TikTok"
-                ratio="4 / 3"
-              className="w-full"
-            /></Reveal>
-          </div>
-        </div>
       </div>
     </section>
   );
