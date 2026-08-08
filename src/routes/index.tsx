@@ -328,7 +328,7 @@ function Audiencia() {
               key={label}
               className="flex items-center gap-5 bg-card px-6 py-6 shadow-[0_10px_30px_-26px_rgba(0,0,0,0.55)]"
             >
-              <span className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-accent/35 text-2xl">
+              <span className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-accent/35 text-2xl emoji">
                 {icon}
               </span>
               <div className="min-w-0">
@@ -545,7 +545,7 @@ function Diferenciais() {
               key={label}
               className="border border-border bg-card px-6 py-10 text-center"
             >
-              <span className="text-3xl">{icon}</span>
+              <span className="emoji text-3xl">{icon}</span>
               <p className="mt-5 text-sm font-medium">{label}</p>
             </li>
           ))}
@@ -628,11 +628,11 @@ function Contato() {
 
         <div className="mt-14 space-y-4 text-sm text-dark-muted">
           <p>
-            <span className="mr-3">📧</span>
+            <span className="emoji mr-3">📧</span>
             <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
           </p>
           <p>
-            <span className="mr-3">📱</span>
+            <span className="emoji mr-3">📱</span>
             {TELEFONE}
           </p>
         </div>
