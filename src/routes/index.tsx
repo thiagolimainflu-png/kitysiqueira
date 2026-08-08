@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 
 import { Reveal } from "@/components/Reveal";
+import { SmoothImage } from "@/components/SmoothImage";
 import { SiteHeader } from "@/components/SiteHeader";
 import { WhatsAppFab, WHATSAPP_URL } from "@/components/WhatsAppFab";
 import heroImg from "@/assets/hero-melissa.jpg";
@@ -90,9 +91,10 @@ function Hero() {
   return (
     <section id="top" className="band-dark relative overflow-hidden">
       <div className="img-frame relative">
-        <img
+        <SmoothImage
           src={heroImg}
           alt="Melissa Costa em vestido rosa ao lado de uma parede florida"
+          wrapperClassName="h-[62vh] min-h-[380px] w-full"
           className="h-[62vh] min-h-[380px] w-full object-cover object-top"
         />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-dark to-transparent" />
@@ -155,10 +157,11 @@ function Sobre() {
     <section id="sobre" className="bg-cream px-5 py-16 sm:px-8">
       <div className="mx-auto max-w-3xl">
         <Reveal variant="scale" className="img-frame">
-          <img
+          <SmoothImage
             src={sobreImg}
             alt="Melissa Costa escolhendo roupas em uma arara colorida"
             loading="lazy"
+            ratio="4 / 5"
             className="w-full object-cover"
           />
         </Reveal>
@@ -259,16 +262,18 @@ function Numeros() {
             Painel de métricas · Dados reais
           </p>
           <div className="mt-6 space-y-6">
-            <Reveal variant="scale" className="img-frame"><img
+            <Reveal variant="scale" className="img-frame"><SmoothImage
               src={metricasInstagram}
               alt="Painel de analytics do Instagram e TikTok de Melissa Costa"
               loading="lazy"
+              ratio="4 / 3"
               className="w-full"
             /></Reveal>
-            <Reveal variant="scale" delay={120} className="img-frame"><img
+            <Reveal variant="scale" delay={120} className="img-frame"><SmoothImage
               src={metricasTiktok}
               alt="Métricas de engajamento, alcance e impressões do TikTok"
               loading="lazy"
+              ratio="4 / 3"
               className="w-full"
             /></Reveal>
           </div>
@@ -392,10 +397,11 @@ function Parceria() {
         </Reveal>
 
         <Reveal variant="scale" className="img-frame mt-12">
-          <img
+          <SmoothImage
             src={parceriaImg}
             alt="Melissa Costa de óculos escuros nas dunas ao entardecer"
             loading="lazy"
+            ratio="4 / 5"
             className="w-full object-cover"
           />
         </Reveal>
@@ -467,10 +473,11 @@ function Investimento() {
     <section id="investimento" className="bg-cream-deep px-5 py-16 sm:px-8">
       <div className="mx-auto max-w-3xl">
         <Reveal variant="scale" className="img-frame">
-          <img
+          <SmoothImage
             src={tabelaImg}
             alt="Melissa Costa em camisa rosa ao lado de uma arara de roupas"
             loading="lazy"
+            ratio="4 / 5"
             className="w-full object-cover"
           />
         </Reveal>
