@@ -166,7 +166,7 @@ function Sobre() {
           <SmoothImage
             src={sobreAsset.url}
             alt="Bianca Pires sorrindo em vestido floral colorido, ao pôr do sol na praia"
-            ratio="4 / 5"
+            ratio="1 / 1"
             className="w-full object-cover"
           />
         </Reveal>
