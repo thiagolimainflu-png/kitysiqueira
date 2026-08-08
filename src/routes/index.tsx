@@ -18,23 +18,26 @@ const TELEFONE = "(85) 99952-1373";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Melissa Costa | Influenciadora Digital de Moda e Lifestyle" },
+      { title: "Bianca Pires | Criadora de Conteúdo Digital" },
       {
         name: "description",
         content:
-          "Melissa Costa: 436K no Instagram e 205K no TikTok. Conteúdo de moda, beleza e lifestyle que transforma estética em influência que vende.",
+          "Bianca Pires (@bianncapires): quase 9 mil seguidores no Instagram com conteúdo de fé, rotina e humor. Publis e parcerias que geram conexão real.",
       },
       {
         property: "og:title",
-        content: "Melissa Costa | Influenciadora Digital de Moda e Lifestyle",
+        content: "Bianca Pires | Criadora de Conteúdo Digital",
       },
       {
         property: "og:description",
         content:
-          "436K seguidores, 61.8M de visualizações e 3.8M de interações mensais. Parcerias estratégicas para marcas que querem resultado real.",
+          "Cristã, rotina e humor. 232 publicações e uma comunidade engajada de 8.9K seguidores. Parcerias com marcas que querem proximidade e confiança.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
+
   component: Home,
 });
 
