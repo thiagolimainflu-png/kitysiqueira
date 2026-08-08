@@ -6,35 +6,36 @@ import { Reveal } from "@/components/Reveal";
 import { SmoothImage } from "@/components/SmoothImage";
 import { SiteHeader } from "@/components/SiteHeader";
 import { WhatsAppFab, WHATSAPP_URL } from "@/components/WhatsAppFab";
-import heroImg from "@/assets/hero-melissa.jpg";
-import heroThumb from "@/assets/hero-melissa-thumb.jpg";
+import heroAsset from "@/assets/hero-bianca.jpg.asset.json";
+import heroThumb from "@/assets/hero-bianca-thumb.jpg";
 import sobreImg from "@/assets/sobre-melissa.jpg";
-import metricasInstagram from "@/assets/metricas-instagram.jpg";
-import metricasTiktok from "@/assets/metricas-tiktok.jpg";
 
-const EMAIL = "melissa.souzac15@gmail.com";
-const TELEFONE = "(85) 99952-1373";
+const EMAIL = "contato.bianncapires@gmail.com";
+const TELEFONE = "Publis e parcerias no direct";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Melissa Costa | Influenciadora Digital de Moda e Lifestyle" },
+      { title: "Bianca Pires | Criadora de Conteúdo Digital" },
       {
         name: "description",
         content:
-          "Melissa Costa: 436K no Instagram e 205K no TikTok. Conteúdo de moda, beleza e lifestyle que transforma estética em influência que vende.",
+          "Bianca Pires (@bianncapires): quase 9 mil seguidores no Instagram com conteúdo de fé, rotina e humor. Publis e parcerias que geram conexão real.",
       },
       {
         property: "og:title",
-        content: "Melissa Costa | Influenciadora Digital de Moda e Lifestyle",
+        content: "Bianca Pires | Criadora de Conteúdo Digital",
       },
       {
         property: "og:description",
         content:
-          "436K seguidores, 61.8M de visualizações e 3.8M de interações mensais. Parcerias estratégicas para marcas que querem resultado real.",
+          "Cristã, rotina e humor. 232 publicações e uma comunidade engajada de 8.9K seguidores. Parcerias com marcas que querem proximidade e confiança.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
+
   component: Home,
 });
 
@@ -92,8 +93,8 @@ function Hero() {
     <section id="top" className="band-dark relative overflow-hidden">
       <div className="img-frame relative">
         <SmoothImage
-          src={heroImg}
-          alt="Melissa Costa em vestido rosa ao lado de uma parede florida"
+          src={heroAsset.url}
+          alt="Bianca Pires sorrindo, com vestido floral rosa ao lado de um arranjo de flores"
           priority
           placeholder={heroThumb}
           objectPosition="object-top"
@@ -103,24 +104,25 @@ function Hero() {
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-dark to-transparent" />
       </div>
       <div className="float-soft relative -mt-16 ml-0 w-fit bg-rose-soft px-7 py-4 text-ink shadow-[0_18px_40px_-24px_rgba(0,0,0,0.7)]">
-        <p className="font-display text-2xl leading-none">3.8M</p>
+        <p className="font-display text-2xl leading-none">8.9K</p>
         <p className="mt-1 text-[0.65rem] tracking-[0.18em] uppercase">
-          Interações/mês
+          Seguidores
         </p>
       </div>
 
       <div className="relative px-5 pb-16 pt-12 text-center sm:px-8">
-        <span className="watermark">Melissa</span>
+        <span className="watermark">Bianca</span>
         <div className="relative mx-auto max-w-3xl">
-          <Reveal delay={60}><Eyebrow>Influenciadora digital · Moda &amp; Lifestyle</Eyebrow></Reveal>
+          <Reveal delay={60}><Eyebrow>Criadora de conteúdo digital · Cristã, rotina &amp; humor</Eyebrow></Reveal>
           <Reveal delay={160}><h1 className="mt-6 font-display text-4xl leading-[1.12] sm:text-6xl">
-            Transformando estética em{" "}
-            <em className="italic text-rose-soft">influência que vende.</em>
+            Fé, rotina e humor que viram{" "}
+            <em className="italic text-rose-soft">conexão de verdade.</em>
           </h1></Reveal>
           <Reveal delay={260}><p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-dark-muted sm:text-base">
-            Moda, lifestyle e performance com autenticidade, estratégia e alto
-            poder de decisão.
+            Siiiim menina! Conteúdo leve, cristão e cheio de identificação — com
+            uma comunidade que acompanha de perto e confia no que eu indico.
           </p></Reveal>
+
 
           <Reveal delay={340} className="mx-auto mt-10 flex max-w-sm flex-col gap-3">
             <CtaWhats className="bg-rose text-white">
@@ -136,10 +138,11 @@ function Hero() {
 
           <Reveal as="dl" delay={440} className="mt-14 grid grid-cols-3 gap-2">
             {[
-              ["436K", "Instagram"],
-              ["205K", "TikTok"],
-              ["62M+", "Views totais"],
+              ["8.991", "Seguidores"],
+              ["232", "Publicações"],
+              ["941", "Seguindo"],
             ].map(([n, l]) => (
+
               <div key={l}>
                 <dt className="font-display text-2xl sm:text-3xl">{n}</dt>
                 <dd className="mt-2 text-[0.6rem] tracking-[0.18em] text-dark-muted uppercase">
@@ -155,21 +158,21 @@ function Hero() {
 }
 
 function Sobre() {
-  const tags = ["Moda", "Lifestyle", "Beleza", "Bem-estar", "Performance"];
+  const tags = ["Cristã", "Rotina", "Humor", "Lifestyle", "Publis"];
   return (
     <section id="sobre" className="bg-cream px-5 py-16 sm:px-8">
       <div className="mx-auto max-w-3xl">
         <Reveal variant="scale" className="img-frame">
           <SmoothImage
             src={sobreImg}
-            alt="Melissa Costa escolhendo roupas em uma arara colorida"
+            alt="Bianca Pires em ensaio de conteúdo"
             ratio="4 / 5"
             className="w-full object-cover"
           />
         </Reveal>
         <Reveal as="figure" delay={120} className="bg-card px-6 py-7 shadow-[0_10px_30px_-24px_rgba(0,0,0,0.5)]">
           <blockquote className="font-display text-base italic">
-            &ldquo;Influência que gera resultado real.&rdquo;
+            &ldquo;Siiiim menina! Fica aqui comigo.&rdquo;
           </blockquote>
         </Reveal>
 
@@ -177,25 +180,26 @@ function Sobre() {
           <Eyebrow>Quem sou</Eyebrow>
           <h2 className="mt-6 font-display text-3xl leading-[1.15] sm:text-5xl">
             Mais do que uma criadora.{" "}
-            <em className="italic text-rose">Uma estrategista.</em>
+            <em className="italic text-rose">Uma amiga do público.</em>
           </h2>
           <div className="mt-7 space-y-5 text-sm leading-loose text-muted-foreground sm:text-base">
             <p>
-              Melissa Costa é criadora de conteúdo focada em moda, beleza,
-              lifestyle e bem-estar, combinando estética, autenticidade e
-              estratégia.
+              Bianca Pires é criadora de conteúdo digital que fala de fé, rotina
+              e humor — sempre com leveza, verdade e proximidade com quem
+              acompanha.
             </p>
             <p>
-              Acadêmica de Medicina, compartilha uma rotina disciplinada e real
-              — conciliando estudos, treinos e produção de conteúdo, conectando
-              saúde, performance e estilo de vida.
+              No perfil @bianncapires, divide o dia a dia, a caminhada cristã e
+              aquelas situações do cotidiano que rendem risada e identificação
+              imediata.
             </p>
             <p>
-              Seu conteúdo vai além da estética: cria conexão, influencia
-              decisões e transforma seguidores em consumidores. Trabalha com
-              marcas que buscam posicionamento, desejo e resultado.
+              É essa confiança que faz as publis funcionarem: quando indico algo,
+              a comunidade escuta, comenta e vai atrás. Publis e parcerias pelo
+              direct.
             </p>
           </div>
+
           <ul className="mt-9 flex flex-wrap gap-2">
             {tags.map((t) => (
               <li
@@ -213,13 +217,12 @@ function Sobre() {
 }
 
 const numeros: [string, string, string][] = [
-  ["Instagram", "436K", "Seguidores"],
-  ["Instagram", "61.8M", "Visualizações totais"],
-  ["Instagram", "3.8M", "Interações mensais"],
-  ["Instagram · Stories", "15K", "Views por stories"],
-  ["TikTok", "205K", "Seguidores"],
-  ["TikTok", "+1M", "Visualizações"],
+  ["Instagram", "8.991", "Seguidores"],
+  ["Instagram", "232", "Publicações"],
+  ["Instagram · Reels", "Alto", "Alcance orgânico"],
+  ["Instagram · Stories", "Diário", "Presença nos stories"],
 ];
+
 
 function Numeros() {
   return (
@@ -256,44 +259,25 @@ function Numeros() {
         </div>
 
         <p className="mt-10 text-center font-display text-sm italic text-dark-muted">
-          Números que mostram alcance. Resultado que mostram impacto.
+          Comunidade pequena no número, gigante na confiança.
         </p>
 
-        <div className="mt-14">
-          <p className="text-center text-[0.6rem] tracking-[0.22em] text-dark-muted uppercase">
-            Painel de métricas · Dados reais
-          </p>
-          <div className="mt-6 space-y-6">
-            <Reveal variant="scale" className="img-frame"><SmoothImage
-              src={metricasInstagram}
-              alt="Painel de analytics do Instagram e TikTok de Melissa Costa"
-                ratio="4 / 3"
-              className="w-full"
-            /></Reveal>
-            <Reveal variant="scale" delay={120} className="img-frame"><SmoothImage
-              src={metricasTiktok}
-              alt="Métricas de engajamento, alcance e impressões do TikTok"
-                ratio="4 / 3"
-              className="w-full"
-            /></Reveal>
-          </div>
-        </div>
       </div>
     </section>
   );
 }
 
 const barras: [string, number][] = [
-  ["Feminino", 80],
-  ["18-35 anos", 72],
-  ["Capitais", 95],
+  ["Feminino", 85],
+  ["18-44 anos", 74],
+  ["Nordeste", 68],
 ];
 
 const audienciaCards: [string, string, string][] = [
-  ["👩", "80%", "Público feminino"],
-  ["📍", "95%", "Em capitais brasileiras"],
-  ["🛍️", "18-50", "Faixa etária principal"],
-  ["💬", "Alto", "Engajamento real"],
+  ["👩", "85%", "Público feminino"],
+  ["🙏", "Cristão", "Valores e estilo de vida"],
+  ["🛍️", "18-44", "Faixa etária principal"],
+  ["💬", "Alto", "Engajamento e confiança"],
 ];
 
 function Audiencia() {
@@ -482,12 +466,12 @@ function Diferenciais() {
 }
 
 const marcas = [
-  "SHEIN",
-  "SHOPEE",
-  "DUX",
-  "HUMAN HEALTH",
-  "GOCASE",
-  "+ MARCAS",
+  "MODA",
+  "BELEZA",
+  "CASA",
+  "IGREJA",
+  "LOCAIS",
+  "+ PARCERIAS",
 ];
 
 function Portfolio() {
@@ -496,10 +480,10 @@ function Portfolio() {
       <Reveal className="mx-auto max-w-3xl text-center">
         <Eyebrow>Portfólio</Eyebrow>
         <h2 className="mt-6 font-display text-3xl sm:text-4xl">
-          Marcas que já confiaram
+          Segmentos que combinam
         </h2>
         <p className="mt-2 font-display text-sm italic text-muted-foreground">
-          em minha influência
+          com o meu conteúdo
         </p>
 
         <ul className="mt-10 grid grid-cols-3 border-t border-l border-border">
@@ -570,24 +554,24 @@ function Contato() {
 function Footer() {
   return (
     <footer className="bg-[#0d0b0b] px-5 py-14 text-center sm:px-8">
-      <p className="font-display text-2xl text-dark-muted">Melissa Costa</p>
+      <p className="font-display text-2xl text-dark-muted">Bianca Pires</p>
       <p className="mt-6 text-xs text-dark-muted/70">
-        © 2025 Melissa Costa · Todos os direitos reservados
+        © 2026 Bianca Pires · Todos os direitos reservados
       </p>
       <div className="mt-6 flex justify-center gap-8 text-[0.62rem] tracking-[0.22em] text-dark-muted/70 uppercase [&_a]:transition-colors [&_a:hover]:text-dark-foreground">
         <a
-          href="https://instagram.com/melissasoucostaa"
+          href="https://instagram.com/bianncapires"
           target="_blank"
           rel="noopener noreferrer"
         >
           Instagram
         </a>
         <a
-          href="https://tiktok.com/@melissasoucostaa"
+          href="https://instagram.com/bianncapires"
           target="_blank"
           rel="noopener noreferrer"
         >
-          TikTok
+          Direct
         </a>
       </div>
     </footer>
