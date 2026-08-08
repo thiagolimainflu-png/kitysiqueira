@@ -6,9 +6,9 @@ import { Reveal } from "@/components/Reveal";
 import { SmoothImage } from "@/components/SmoothImage";
 import { SiteHeader } from "@/components/SiteHeader";
 import { WhatsAppFab, WHATSAPP_URL } from "@/components/WhatsAppFab";
-import heroAsset from "@/assets/hero-bianca.jpg.asset.json";
+import heroImg from "@/assets/hero-bianca.jpg";
 import heroThumb from "@/assets/hero-bianca-thumb.jpg";
-import sobreAsset from "@/assets/sobre-bianca.jpg.asset.json";
+import sobreImg from "@/assets/sobre-bianca.jpg";
 
 const EMAIL = "contato.bianncapires@gmail.com";
 const TELEFONE = "Publis e parcerias no direct";
@@ -93,7 +93,7 @@ function Hero() {
     <section id="top" className="band-dark relative overflow-hidden">
       <div className="img-frame relative">
         <SmoothImage
-          src={heroAsset.url}
+          src={heroImg}
           alt="Bianca Pires sorrindo, com vestido floral rosa ao lado de um arranjo de flores"
           priority
           placeholder={heroThumb}
@@ -164,7 +164,7 @@ function Sobre() {
       <div className="mx-auto max-w-3xl">
         <Reveal variant="scale" className="img-frame">
           <SmoothImage
-            src={sobreAsset.url}
+            src={sobreImg}
             alt="Bianca Pires sorrindo em vestido floral colorido, ao pôr do sol na praia"
             ratio="1 / 1"
             className="w-full object-cover"
