@@ -201,7 +201,7 @@ function Sobre() {
   );
 }
 
-const numeros = [
+const numeros: [string, string, string][] = [
   ["Instagram", "436K", "Seguidores"],
   ["Instagram", "61.8M", "Visualizações totais"],
   ["Instagram", "3.8M", "Interações mensais"],
