@@ -154,19 +154,21 @@ function Sobre() {
   return (
     <section id="sobre" className="bg-cream px-5 py-16 sm:px-8">
       <div className="mx-auto max-w-3xl">
-        <img
-          src={sobreImg}
-          alt="Melissa Costa escolhendo roupas em uma arara colorida"
-          loading="lazy"
-          className="w-full object-cover"
-        />
-        <figure className="bg-card px-6 py-7 shadow-[0_10px_30px_-24px_rgba(0,0,0,0.5)]">
+        <Reveal variant="scale" className="img-frame">
+          <img
+            src={sobreImg}
+            alt="Melissa Costa escolhendo roupas em uma arara colorida"
+            loading="lazy"
+            className="w-full object-cover"
+          />
+        </Reveal>
+        <Reveal as="figure" delay={120} className="bg-card px-6 py-7 shadow-[0_10px_30px_-24px_rgba(0,0,0,0.5)]">
           <blockquote className="font-display text-base italic">
             &ldquo;Influência que gera resultado real.&rdquo;
           </blockquote>
-        </figure>
+        </Reveal>
 
-        <div className="mt-14">
+        <Reveal className="mt-14">
           <Eyebrow>Quem sou</Eyebrow>
           <h2 className="mt-6 font-display text-3xl leading-[1.15] sm:text-5xl">
             Mais do que uma criadora.{" "}
@@ -199,7 +201,7 @@ function Sobre() {
               </li>
             ))}
           </ul>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
@@ -218,7 +220,7 @@ function Numeros() {
   return (
     <section id="numeros" className="band-dark px-5 py-16 sm:px-8">
       <div className="mx-auto max-w-3xl">
-        <div className="text-center">
+        <Reveal className="text-center">
           <Eyebrow>Prova social</Eyebrow>
           <h2 className="mt-6 font-display text-3xl leading-[1.15] sm:text-5xl">
             Números que falam
@@ -228,12 +230,13 @@ function Numeros() {
           <p className="mt-4 font-display text-sm italic text-dark-muted">
             Alcance que converte.
           </p>
-        </div>
+        </Reveal>
 
         <div className="mt-12 border border-white/10">
           {numeros.map(([rede, valor, label], i) => (
-            <div
+            <Reveal
               key={valor + label}
+              delay={i * 90}
               className={`px-6 py-10 text-center ${i > 0 ? "border-t border-white/10" : ""}`}
             >
               <p className="text-[0.6rem] tracking-[0.22em] text-rose-soft uppercase">
@@ -243,7 +246,7 @@ function Numeros() {
               <p className="mt-3 text-[0.65rem] tracking-[0.18em] text-dark-muted uppercase">
                 {label}
               </p>
-            </div>
+            </Reveal>
           ))}
         </div>
 
@@ -256,18 +259,18 @@ function Numeros() {
             Painel de métricas · Dados reais
           </p>
           <div className="mt-6 space-y-6">
-            <img
+            <Reveal variant="scale" className="img-frame"><img
               src={metricasInstagram}
               alt="Painel de analytics do Instagram e TikTok de Melissa Costa"
               loading="lazy"
               className="w-full"
-            />
-            <img
+            /></Reveal>
+            <Reveal variant="scale" delay={120} className="img-frame"><img
               src={metricasTiktok}
               alt="Métricas de engajamento, alcance e impressões do TikTok"
               loading="lazy"
               className="w-full"
-            />
+            /></Reveal>
           </div>
         </div>
       </div>
@@ -293,7 +296,7 @@ function Audiencia() {
   return (
     <section id="audiencia" className="bg-cream-deep px-5 py-16 sm:px-8">
       <div className="mx-auto max-w-3xl">
-        <div className="text-center">
+        <Reveal className="text-center">
           <Eyebrow>Audiência</Eyebrow>
           <h2 className="mt-6 font-display text-3xl leading-[1.15] sm:text-5xl">
             Um público qualificado e{" "}
@@ -302,7 +305,7 @@ function Audiencia() {
           <p className="mt-4 font-display text-sm italic text-muted-foreground">
             &ldquo;Não é só alcance. É conversão.&rdquo;
           </p>
-        </div>
+        </Reveal>
 
         <div ref={ref} className="mt-12 space-y-6">
           {barras.map(([label, pct]) => (
@@ -327,10 +330,12 @@ function Audiencia() {
         </div>
 
         <ul className="mt-10 space-y-4">
-          {audienciaCards.map(([icon, value, label]) => (
-            <li
+          {audienciaCards.map(([icon, value, label], i) => (
+            <Reveal
+              as="li"
               key={label}
-              className="flex items-center gap-5 bg-card px-6 py-6 shadow-[0_10px_30px_-26px_rgba(0,0,0,0.55)]"
+              delay={i * 90}
+              className="lift flex items-center gap-5 bg-card px-6 py-6 shadow-[0_10px_30px_-26px_rgba(0,0,0,0.55)]"
             >
               <span className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-accent/35 text-2xl emoji">
                 {icon}
@@ -339,7 +344,7 @@ function Audiencia() {
                 <p className="font-display text-2xl">{value}</p>
                 <p className="mt-1 text-sm text-muted-foreground">{label}</p>
               </div>
-            </li>
+            </Reveal>
           ))}
         </ul>
       </div>
@@ -379,23 +384,25 @@ function Parceria() {
   return (
     <section id="parceria" className="band-dark px-5 py-16 sm:px-8">
       <div className="mx-auto max-w-3xl">
-        <div className="text-center">
+        <Reveal className="text-center">
           <Eyebrow>Serviços</Eyebrow>
           <h2 className="mt-6 font-display text-3xl sm:text-5xl">
             Formatos de Parceria
           </h2>
-        </div>
+        </Reveal>
 
-        <img
-          src={parceriaImg}
-          alt="Melissa Costa de óculos escuros nas dunas ao entardecer"
-          loading="lazy"
-          className="mt-12 w-full object-cover"
-        />
+        <Reveal variant="scale" className="img-frame mt-12">
+          <img
+            src={parceriaImg}
+            alt="Melissa Costa de óculos escuros nas dunas ao entardecer"
+            loading="lazy"
+            className="w-full object-cover"
+          />
+        </Reveal>
 
         <div className="mt-10 space-y-6">
-          {formatos.map((f) => (
-            <article key={f.tag} className="border border-white/12 px-6 py-9">
+          {formatos.map((f, i) => (
+            <Reveal as="article" key={f.tag} delay={i * 100} className="lift border border-white/12 px-6 py-9">
               <p className="text-[0.62rem] tracking-[0.22em] text-rose-soft uppercase">
                 {f.tag}
               </p>
@@ -411,7 +418,7 @@ function Parceria() {
                   </li>
                 ))}
               </ul>
-            </article>
+            </Reveal>
           ))}
         </div>
       </div>
@@ -437,10 +444,10 @@ const combos = [
 
 function PriceCard({ label }: { label: string }) {
   return (
-    <li className="bg-card px-6 py-7">
+    <Reveal as="li" className="lift bg-card px-6 py-7">
       <p className="text-sm text-muted-foreground">{label}</p>
       <CtaWhats className="mt-6 bg-rose text-white">Consultar valor →</CtaWhats>
-    </li>
+    </Reveal>
   );
 }
 
@@ -459,14 +466,16 @@ function Investimento() {
   return (
     <section id="investimento" className="bg-cream-deep px-5 py-16 sm:px-8">
       <div className="mx-auto max-w-3xl">
-        <img
-          src={tabelaImg}
-          alt="Melissa Costa em camisa rosa ao lado de uma arara de roupas"
-          loading="lazy"
-          className="w-full object-cover"
-        />
+        <Reveal variant="scale" className="img-frame">
+          <img
+            src={tabelaImg}
+            alt="Melissa Costa em camisa rosa ao lado de uma arara de roupas"
+            loading="lazy"
+            className="w-full object-cover"
+          />
+        </Reveal>
 
-        <div className="mt-12">
+        <Reveal className="mt-12">
           <Eyebrow>Investimento</Eyebrow>
           <h2 className="mt-6 font-display text-3xl sm:text-5xl">
             Tabela de Valores
@@ -481,7 +490,7 @@ function Investimento() {
           <CtaWhats className="mt-6 bg-rose text-white">
             Fechar parceria
           </CtaWhats>
-        </div>
+        </Reveal>
 
         <GroupTitle>Publicações avulsas</GroupTitle>
         <ul className="space-y-4">
@@ -497,7 +506,7 @@ function Investimento() {
           ))}
         </ul>
 
-        <article className="band-dark mt-14 px-6 py-10">
+        <Reveal as="article" className="band-dark lift mt-14 px-6 py-10">
           <p className="text-[0.62rem] tracking-[0.22em] text-rose-soft uppercase">
             Melhor custo-benefício
           </p>
@@ -515,7 +524,7 @@ function Investimento() {
           <p className="mt-5 text-center text-[0.62rem] tracking-[0.22em] text-dark-muted uppercase">
             Resposta em minutos
           </p>
-        </article>
+        </Reveal>
       </div>
     </section>
   );
@@ -533,7 +542,7 @@ function Diferenciais() {
   return (
     <section id="diferenciais" className="bg-cream px-5 py-16 sm:px-8">
       <div className="mx-auto max-w-3xl">
-        <div className="text-center">
+        <Reveal className="text-center">
           <Eyebrow>Diferenciais</Eyebrow>
           <h2 className="mt-6 font-display text-3xl leading-[1.15] sm:text-5xl">
             O que marcas parceiras recebem.
@@ -541,17 +550,19 @@ function Diferenciais() {
           <p className="mt-4 text-sm text-muted-foreground">
             Muito além de um post. Uma parceria estratégica.
           </p>
-        </div>
+        </Reveal>
 
         <ul className="mt-12 space-y-4">
-          {diferenciais.map(([icon, label]) => (
-            <li
+          {diferenciais.map(([icon, label], i) => (
+            <Reveal
+              as="li"
               key={label}
-              className="border border-border bg-card px-6 py-10 text-center"
+              delay={i * 80}
+              className="lift border border-border bg-card px-6 py-10 text-center"
             >
               <span className="emoji text-3xl">{icon}</span>
               <p className="mt-5 text-sm font-medium">{label}</p>
-            </li>
+            </Reveal>
           ))}
         </ul>
       </div>
@@ -571,7 +582,7 @@ const marcas = [
 function Portfolio() {
   return (
     <section id="portfolio" className="bg-cream px-5 pb-16 sm:px-8">
-      <div className="mx-auto max-w-3xl text-center">
+      <Reveal className="mx-auto max-w-3xl text-center">
         <Eyebrow>Portfólio</Eyebrow>
         <h2 className="mt-6 font-display text-3xl sm:text-4xl">
           Marcas que já confiaram
@@ -584,13 +595,13 @@ function Portfolio() {
           {marcas.map((m) => (
             <li
               key={m}
-              className="grid min-h-24 place-items-center border-r border-b border-border bg-card px-2 text-[0.6rem] tracking-[0.14em] text-muted-foreground uppercase"
+              className="grid min-h-24 place-items-center border-r border-b border-border bg-card px-2 text-[0.6rem] tracking-[0.14em] text-muted-foreground uppercase transition-colors duration-500 hover:bg-accent/20 hover:text-ink"
             >
               {m}
             </li>
           ))}
         </ul>
-      </div>
+      </Reveal>
     </section>
   );
 }
@@ -599,7 +610,7 @@ function Contato() {
   return (
     <section id="contato" className="band-dark relative overflow-hidden px-5 py-20 sm:px-8">
       <span className="watermark">Juntos</span>
-      <div className="relative mx-auto max-w-2xl text-center">
+      <Reveal className="relative mx-auto max-w-2xl text-center">
         <Eyebrow>Contato</Eyebrow>
         <h2 className="mt-6 font-display text-4xl leading-[1.12] sm:text-5xl">
           Vamos construir algo{" "}
@@ -615,7 +626,7 @@ function Contato() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-1 items-center justify-center gap-3 bg-whats px-6 py-4 text-xs font-semibold tracking-[0.2em] text-white uppercase"
+            className="btn-sheen flex flex-1 items-center justify-center gap-3 bg-whats px-6 py-4 text-xs font-semibold tracking-[0.2em] text-white uppercase"
           >
             <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden="true">
               <path d="M12.04 2C6.6 2 2.18 6.42 2.18 11.86c0 1.74.46 3.44 1.32 4.94L2 22l5.35-1.4a9.83 9.83 0 0 0 4.69 1.19c5.43 0 9.85-4.42 9.85-9.86 0-2.63-1.02-5.1-2.88-6.96A9.78 9.78 0 0 0 12.04 2z" />
@@ -624,7 +635,7 @@ function Contato() {
           </a>
           <a
             href={`mailto:${EMAIL}`}
-            className="flex-1 border border-white/35 px-6 py-4 text-xs font-semibold tracking-[0.2em] uppercase"
+            className="btn-sheen flex-1 border border-white/35 px-6 py-4 text-xs font-semibold tracking-[0.2em] uppercase"
           >
             E-mail
           </a>
@@ -633,14 +644,14 @@ function Contato() {
         <div className="mt-14 space-y-4 text-sm text-dark-muted">
           <p>
             <span className="emoji mr-3">📧</span>
-            <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+            <a href={`mailto:${EMAIL}`} className="link-underline">{EMAIL}</a>
           </p>
           <p>
             <span className="emoji mr-3">📱</span>
             {TELEFONE}
           </p>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }
