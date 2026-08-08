@@ -5,7 +5,6 @@ const links = [
   { href: "#numeros", label: "Números" },
   { href: "#audiencia", label: "Audiência" },
   { href: "#parceria", label: "Formatos" },
-  { href: "#investimento", label: "Tabela de valores" },
   { href: "#diferenciais", label: "Diferenciais" },
   { href: "#portfolio", label: "Portfólio" },
   { href: "#contato", label: "Contato" },
