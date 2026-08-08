@@ -65,13 +65,27 @@ export function SmoothImage({
       className={cn("relative overflow-hidden", wrapperClassName)}
       style={ratio && !loaded ? { aspectRatio: ratio } : undefined}
     >
-      <div
-        aria-hidden
-        className={cn(
-          "skeleton-shimmer absolute inset-0 transition-opacity duration-700",
-          loaded ? "opacity-0" : "opacity-100",
-        )}
-      />
+      {placeholder ? (
+        <img
+          aria-hidden
+          src={placeholder}
+          alt=""
+          className={cn(
+            "absolute inset-0 h-full w-full scale-110 object-cover blur-xl transition-opacity duration-700",
+            objectPosition,
+            loaded ? "opacity-0" : "opacity-100",
+          )}
+        />
+      ) : (
+        <div
+          aria-hidden
+          className={cn(
+            "skeleton-shimmer absolute inset-0 transition-opacity duration-700",
+            loaded ? "opacity-0" : "opacity-100",
+          )}
+        />
+      )}
+
       {inView ? (
         <img
           ref={imgRef}
