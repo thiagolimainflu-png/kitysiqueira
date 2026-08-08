@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
+import { Clock, Image as ImageIcon, PlusCircle, Star } from "lucide-react";
 
 import { Reveal } from "@/components/Reveal";
 import { SmoothImage } from "@/components/SmoothImage";
@@ -8,7 +9,6 @@ import { WhatsAppFab, WHATSAPP_URL } from "@/components/WhatsAppFab";
 import heroImg from "@/assets/hero-melissa.jpg";
 import heroThumb from "@/assets/hero-melissa-thumb.jpg";
 import sobreImg from "@/assets/sobre-melissa.jpg";
-import parceriaImg from "@/assets/parceria-melissa.jpg";
 import tabelaImg from "@/assets/tabela-melissa.jpg";
 import metricasInstagram from "@/assets/metricas-instagram.jpg";
 import metricasTiktok from "@/assets/metricas-tiktok.jpg";
@@ -360,77 +360,87 @@ function Audiencia() {
 
 const formatos = [
   {
-    tag: "Avulso",
-    title: "Conteúdo Unitário",
-    items: ["Stories", "Feed (foto)", "Reels", "TikTok"],
+    icon: Clock,
+    title: "Stories",
+    desc: "Sequência de stories com conteúdo autêntico, mostrando o produto ou serviço integrado à rotina.",
   },
   {
-    tag: "Combinado",
-    title: "Combos Estratégicos",
-    items: [
-      "Reels + Stories",
-      "Feed + Stories",
-      "Campanhas completas",
-      "Instagram + TikTok",
-    ],
+    icon: PlusCircle,
+    title: "Reels",
+    desc: "Vídeo curto com roteiro criativo, edição profissional e integração natural da marca ao conteúdo.",
   },
   {
-    tag: "Recorrente",
-    title: "Parcerias Mensais",
-    items: [
-      "Plano semanal dedicado",
-      "Presença contínua",
-      "Estratégia de longo prazo",
-      "Brand ambassador",
-    ],
+    icon: ImageIcon,
+    title: "Post no Feed",
+    desc: "Publicação estática ou carrossel com foto profissional, legenda estratégica e menção à marca.",
+  },
+  {
+    icon: Star,
+    title: "Combo Completo",
+    desc: "Pacote personalizado combinando Stories + Reels + Post, com cobertura completa e maior impacto.",
+    recommended: true,
   },
 ];
 
 function Parceria() {
   return (
-    <section id="parceria" className="band-dark px-5 py-16 sm:px-8">
-      <div className="mx-auto max-w-3xl">
+    <section id="parceria" className="bg-secondary px-5 py-20 sm:px-8">
+      <div className="mx-auto max-w-5xl">
         <Reveal className="text-center">
-          <Eyebrow>Serviços</Eyebrow>
-          <h2 className="mt-6 font-display text-3xl sm:text-5xl">
-            Formatos de Parceria
+          <p className="text-[0.68rem] tracking-[0.24em] text-primary uppercase">
+            Formatos
+          </p>
+          <h2 className="mt-5 font-display text-4xl leading-tight sm:text-5xl">
+            Como podemos
+            <br />
+            trabalhar juntos
           </h2>
         </Reveal>
 
-        <Reveal variant="scale" className="img-frame mt-12">
-          <SmoothImage
-            src={parceriaImg}
-            alt="Melissa Costa de óculos escuros nas dunas ao entardecer"
-            ratio="4 / 5"
-            className="w-full object-cover"
-          />
-        </Reveal>
-
-        <div className="mt-10 space-y-6">
-          {formatos.map((f, i) => (
-            <Reveal as="article" key={f.tag} delay={i * 100} className="lift border border-white/12 px-6 py-9">
-              <p className="text-[0.62rem] tracking-[0.22em] text-rose-soft uppercase">
-                {f.tag}
-              </p>
-              <h3 className="mt-5 font-display text-3xl">{f.title}</h3>
-              <ul className="mt-6 space-y-4">
-                {f.items.map((it) => (
-                  <li
-                    key={it}
-                    className="flex items-center gap-4 text-sm text-dark-muted"
-                  >
-                    <span className="h-px w-6 shrink-0 bg-rose-soft" />
-                    {it}
-                  </li>
-                ))}
-              </ul>
-            </Reveal>
-          ))}
+        <div className="mt-12 grid gap-6 sm:grid-cols-2">
+          {formatos.map((f, i) => {
+            const Icon = f.icon;
+            return (
+              <Reveal
+                as="article"
+                key={f.title}
+                delay={i * 90}
+                className="relative"
+              >
+                <div
+                  className={`lift relative h-full rounded-xl bg-card px-7 py-10 text-center ${
+                    f.recommended
+                      ? "border border-primary/60"
+                      : "border border-border/60"
+                  }`}
+                >
+                  {f.recommended ? (
+                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-[0.6rem] tracking-[0.18em] text-primary-foreground uppercase">
+                      Recomendado
+                    </span>
+                  ) : null}
+                  <Icon
+                    className="mx-auto h-6 w-6 text-primary"
+                    strokeWidth={1.4}
+                    aria-hidden
+                  />
+                  <h3 className="mt-6 font-display text-2xl">{f.title}</h3>
+                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                    {f.desc}
+                  </p>
+                  <p className="mt-6 text-[0.68rem] tracking-[0.2em] text-primary uppercase">
+                    Sob consulta
+                  </p>
+                </div>
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>
   );
 }
+
 
 const avulsas = [
   "1 Storie mostrando o produto",
