@@ -93,7 +93,7 @@ function Hero() {
       <div className="img-frame relative">
         <SmoothImage
           src={heroImg}
-          alt="Melissa Costa em vestido rosa ao lado de uma parede florida"
+          alt="Bianca Pires, criadora de conteúdo digital"
           priority
           placeholder={heroThumb}
           objectPosition="object-top"
@@ -110,7 +110,7 @@ function Hero() {
       </div>
 
       <div className="relative px-5 pb-16 pt-12 text-center sm:px-8">
-        <span className="watermark">Melissa</span>
+        <span className="watermark">Bianca</span>
         <div className="relative mx-auto max-w-3xl">
           <Reveal delay={60}><Eyebrow>Influenciadora digital · Moda &amp; Lifestyle</Eyebrow></Reveal>
           <Reveal delay={160}><h1 className="mt-6 font-display text-4xl leading-[1.12] sm:text-6xl">
@@ -162,7 +162,7 @@ function Sobre() {
         <Reveal variant="scale" className="img-frame">
           <SmoothImage
             src={sobreImg}
-            alt="Melissa Costa escolhendo roupas em uma arara colorida"
+            alt="Bianca Pires em ensaio de conteúdo"
             ratio="4 / 5"
             className="w-full object-cover"
           />
@@ -181,9 +181,9 @@ function Sobre() {
           </h2>
           <div className="mt-7 space-y-5 text-sm leading-loose text-muted-foreground sm:text-base">
             <p>
-              Melissa Costa é criadora de conteúdo focada em moda, beleza,
-              lifestyle e bem-estar, combinando estética, autenticidade e
-              estratégia.
+              Bianca Pires é criadora de conteúdo digital que fala de fé, rotina e
+              humor — sempre com leveza, verdade e proximidade com quem
+              acompanha.
             </p>
             <p>
               Acadêmica de Medicina, compartilha uma rotina disciplinada e real
@@ -570,20 +570,20 @@ function Contato() {
 function Footer() {
   return (
     <footer className="bg-[#0d0b0b] px-5 py-14 text-center sm:px-8">
-      <p className="font-display text-2xl text-dark-muted">Melissa Costa</p>
+      <p className="font-display text-2xl text-dark-muted">Bianca Pires</p>
       <p className="mt-6 text-xs text-dark-muted/70">
-        © 2025 Melissa Costa · Todos os direitos reservados
+        © 2026 Bianca Pires · Todos os direitos reservados
       </p>
       <div className="mt-6 flex justify-center gap-8 text-[0.62rem] tracking-[0.22em] text-dark-muted/70 uppercase [&_a]:transition-colors [&_a:hover]:text-dark-foreground">
         <a
-          href="https://instagram.com/melissasoucostaa"
+          href="https://instagram.com/bianncapires"
           target="_blank"
           rel="noopener noreferrer"
         >
           Instagram
         </a>
         <a
-          href="https://tiktok.com/@melissasoucostaa"
+          href="https://instagram.com/bianncapires"
           target="_blank"
           rel="noopener noreferrer"
         >
