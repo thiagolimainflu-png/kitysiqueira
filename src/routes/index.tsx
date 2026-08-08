@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
+import { Clock, Image as ImageIcon, PlusCircle, Star } from "lucide-react";
 
 import { Reveal } from "@/components/Reveal";
 import { SmoothImage } from "@/components/SmoothImage";
@@ -8,7 +9,6 @@ import { WhatsAppFab, WHATSAPP_URL } from "@/components/WhatsAppFab";
 import heroImg from "@/assets/hero-melissa.jpg";
 import heroThumb from "@/assets/hero-melissa-thumb.jpg";
 import sobreImg from "@/assets/sobre-melissa.jpg";
-import parceriaImg from "@/assets/parceria-melissa.jpg";
 import tabelaImg from "@/assets/tabela-melissa.jpg";
 import metricasInstagram from "@/assets/metricas-instagram.jpg";
 import metricasTiktok from "@/assets/metricas-tiktok.jpg";
