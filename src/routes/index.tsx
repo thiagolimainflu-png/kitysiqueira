@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 
+import { Reveal } from "@/components/Reveal";
 import { SiteHeader } from "@/components/SiteHeader";
 import { WhatsAppFab, WHATSAPP_URL } from "@/components/WhatsAppFab";
 import heroImg from "@/assets/hero-melissa.jpg";
@@ -76,7 +77,7 @@ function CtaWhats({
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className={`block w-full px-6 py-4 text-center text-xs font-semibold tracking-[0.2em] uppercase transition-opacity hover:opacity-90 ${className}`}
+      className={`btn-sheen block w-full px-6 py-4 text-center text-xs font-semibold tracking-[0.2em] uppercase ${className}`}
     >
       {children}
     </a>
@@ -88,12 +89,15 @@ function CtaWhats({
 function Hero() {
   return (
     <section id="top" className="band-dark relative overflow-hidden">
-      <img
-        src={heroImg}
-        alt="Melissa Costa em vestido rosa ao lado de uma parede florida"
-        className="h-[62vh] min-h-[380px] w-full object-cover object-top"
-      />
-      <div className="relative -mt-16 ml-0 w-fit bg-rose-soft px-7 py-4 text-ink">
+      <div className="img-frame relative">
+        <img
+          src={heroImg}
+          alt="Melissa Costa em vestido rosa ao lado de uma parede florida"
+          className="h-[62vh] min-h-[380px] w-full object-cover object-top"
+        />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-dark to-transparent" />
+      </div>
+      <div className="float-soft relative -mt-16 ml-0 w-fit bg-rose-soft px-7 py-4 text-ink shadow-[0_18px_40px_-24px_rgba(0,0,0,0.7)]">
         <p className="font-display text-2xl leading-none">3.8M</p>
         <p className="mt-1 text-[0.65rem] tracking-[0.18em] uppercase">
           Interações/mês
@@ -103,29 +107,29 @@ function Hero() {
       <div className="relative px-5 pb-16 pt-12 text-center sm:px-8">
         <span className="watermark">Melissa</span>
         <div className="relative mx-auto max-w-3xl">
-          <Eyebrow>Influenciadora digital · Moda &amp; Lifestyle</Eyebrow>
-          <h1 className="mt-6 font-display text-4xl leading-[1.12] sm:text-6xl">
+          <Reveal delay={60}><Eyebrow>Influenciadora digital · Moda &amp; Lifestyle</Eyebrow></Reveal>
+          <Reveal delay={160}><h1 className="mt-6 font-display text-4xl leading-[1.12] sm:text-6xl">
             Transformando estética em{" "}
             <em className="italic text-rose-soft">influência que vende.</em>
-          </h1>
-          <p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-dark-muted sm:text-base">
+          </h1></Reveal>
+          <Reveal delay={260}><p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-dark-muted sm:text-base">
             Moda, lifestyle e performance com autenticidade, estratégia e alto
             poder de decisão.
-          </p>
+          </p></Reveal>
 
-          <div className="mx-auto mt-10 flex max-w-sm flex-col gap-3">
+          <Reveal delay={340} className="mx-auto mt-10 flex max-w-sm flex-col gap-3">
             <CtaWhats className="bg-rose text-white">
               Quero anunciar com você
             </CtaWhats>
             <a
               href="#numeros"
-              className="block w-full border border-white/35 px-6 py-4 text-center text-xs font-semibold tracking-[0.2em] uppercase"
+              className="btn-sheen block w-full border border-white/35 px-6 py-4 text-center text-xs font-semibold tracking-[0.2em] uppercase"
             >
               Ver resultados
             </a>
-          </div>
+          </Reveal>
 
-          <dl className="mt-14 grid grid-cols-3 gap-2">
+          <Reveal as="dl" delay={440} className="mt-14 grid grid-cols-3 gap-2">
             {[
               ["436K", "Instagram"],
               ["205K", "TikTok"],
@@ -138,7 +142,7 @@ function Hero() {
                 </dd>
               </div>
             ))}
-          </dl>
+          </Reveal>
         </div>
       </div>
     </section>
