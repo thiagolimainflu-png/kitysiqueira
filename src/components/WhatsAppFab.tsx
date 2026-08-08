@@ -1,5 +1,5 @@
 export const WHATSAPP_URL =
-  "https://wa.me/5585999521373?text=Ol%C3%A1%20Bianca!%20Quero%20fazer%20uma%20parceria.";
+  "https://api.whatsapp.com/send/?phone=71986113211&text&type=phone_number&app_absent=0";
 
 export function WhatsAppFab() {
   return (
