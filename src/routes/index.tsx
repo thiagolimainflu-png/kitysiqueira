@@ -8,7 +8,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { WhatsAppFab, WHATSAPP_URL } from "@/components/WhatsAppFab";
 import heroAsset from "@/assets/hero-bianca.jpg.asset.json";
 import heroThumb from "@/assets/hero-bianca-thumb.jpg";
-import sobreImg from "@/assets/sobre-melissa.jpg";
+import sobreAsset from "@/assets/sobre-bianca.jpg.asset.json";
 
 const EMAIL = "contato.bianncapires@gmail.com";
 const TELEFONE = "Publis e parcerias no direct";
@@ -164,8 +164,8 @@ function Sobre() {
       <div className="mx-auto max-w-3xl">
         <Reveal variant="scale" className="img-frame">
           <SmoothImage
-            src={sobreImg}
-            alt="Bianca Pires em ensaio de conteúdo"
+            src={sobreAsset.url}
+            alt="Bianca Pires sorrindo em vestido floral colorido, ao pôr do sol na praia"
             ratio="4 / 5"
             className="w-full object-cover"
           />
