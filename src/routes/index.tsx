@@ -277,7 +277,7 @@ const barras: [string, number][] = [
   ["Capitais", 95],
 ];
 
-const audienciaCards = [
+const audienciaCards: [string, string, string][] = [
   ["👩", "80%", "Público feminino"],
   ["📍", "95%", "Em capitais brasileiras"],
   ["🛍️", "18-50", "Faixa etária principal"],
@@ -517,7 +517,7 @@ function Investimento() {
   );
 }
 
-const diferenciais = [
+const diferenciais: [string, string][] = [
   ["🎯", "Conteúdo estratégico que vende"],
   ["✨", "Produção estética de alto nível"],
   ["❤️", "Conexão real com o público"],
