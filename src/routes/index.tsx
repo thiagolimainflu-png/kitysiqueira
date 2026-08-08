@@ -219,13 +219,12 @@ function Sobre() {
 }
 
 const numeros: [string, string, string][] = [
-  ["Instagram", "436K", "Seguidores"],
-  ["Instagram", "61.8M", "Visualizações totais"],
-  ["Instagram", "3.8M", "Interações mensais"],
-  ["Instagram · Stories", "15K", "Views por stories"],
-  ["TikTok", "205K", "Seguidores"],
-  ["TikTok", "+1M", "Visualizações"],
+  ["Instagram", "8.991", "Seguidores"],
+  ["Instagram", "232", "Publicações"],
+  ["Instagram · Reels", "Alto", "Alcance orgânico"],
+  ["Instagram · Stories", "Diário", "Presença nos stories"],
 ];
+
 
 function Numeros() {
   return (
