@@ -9,11 +9,9 @@ import { WhatsAppFab, WHATSAPP_URL } from "@/components/WhatsAppFab";
 import heroImg from "@/assets/hero-melissa.jpg";
 import heroThumb from "@/assets/hero-melissa-thumb.jpg";
 import sobreImg from "@/assets/sobre-melissa.jpg";
-import metricasInstagram from "@/assets/metricas-instagram.jpg";
-import metricasTiktok from "@/assets/metricas-tiktok.jpg";
 
-const EMAIL = "melissa.souzac15@gmail.com";
-const TELEFONE = "(85) 99952-1373";
+const EMAIL = "contato.bianncapires@gmail.com";
+const TELEFONE = "Publis e parcerias no direct";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -270,16 +268,16 @@ function Numeros() {
 }
 
 const barras: [string, number][] = [
-  ["Feminino", 80],
-  ["18-35 anos", 72],
-  ["Capitais", 95],
+  ["Feminino", 85],
+  ["18-44 anos", 74],
+  ["Nordeste", 68],
 ];
 
 const audienciaCards: [string, string, string][] = [
-  ["👩", "80%", "Público feminino"],
-  ["📍", "95%", "Em capitais brasileiras"],
-  ["🛍️", "18-50", "Faixa etária principal"],
-  ["💬", "Alto", "Engajamento real"],
+  ["👩", "85%", "Público feminino"],
+  ["🙏", "Cristão", "Valores e estilo de vida"],
+  ["🛍️", "18-44", "Faixa etária principal"],
+  ["💬", "Alto", "Engajamento e confiança"],
 ];
 
 function Audiencia() {
@@ -468,12 +466,12 @@ function Diferenciais() {
 }
 
 const marcas = [
-  "SHEIN",
-  "SHOPEE",
-  "DUX",
-  "HUMAN HEALTH",
-  "GOCASE",
-  "+ MARCAS",
+  "MODA",
+  "BELEZA",
+  "CASA",
+  "IGREJA",
+  "LOCAIS",
+  "+ PARCERIAS",
 ];
 
 function Portfolio() {
@@ -482,10 +480,10 @@ function Portfolio() {
       <Reveal className="mx-auto max-w-3xl text-center">
         <Eyebrow>Portfólio</Eyebrow>
         <h2 className="mt-6 font-display text-3xl sm:text-4xl">
-          Marcas que já confiaram
+          Segmentos que combinam
         </h2>
         <p className="mt-2 font-display text-sm italic text-muted-foreground">
-          em minha influência
+          com o meu conteúdo
         </p>
 
         <ul className="mt-10 grid grid-cols-3 border-t border-l border-border">
@@ -573,7 +571,7 @@ function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          TikTok
+          Direct
         </a>
       </div>
     </footer>
