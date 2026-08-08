@@ -94,6 +94,7 @@ function Hero() {
         <SmoothImage
           src={heroImg}
           alt="Melissa Costa em vestido rosa ao lado de uma parede florida"
+          priority
           wrapperClassName="h-[62vh] min-h-[380px] w-full"
           className="h-[62vh] min-h-[380px] w-full object-cover object-top"
         />
@@ -160,7 +161,6 @@ function Sobre() {
           <SmoothImage
             src={sobreImg}
             alt="Melissa Costa escolhendo roupas em uma arara colorida"
-            loading="lazy"
             ratio="4 / 5"
             className="w-full object-cover"
           />
@@ -265,15 +265,13 @@ function Numeros() {
             <Reveal variant="scale" className="img-frame"><SmoothImage
               src={metricasInstagram}
               alt="Painel de analytics do Instagram e TikTok de Melissa Costa"
-              loading="lazy"
-              ratio="4 / 3"
+                ratio="4 / 3"
               className="w-full"
             /></Reveal>
             <Reveal variant="scale" delay={120} className="img-frame"><SmoothImage
               src={metricasTiktok}
               alt="Métricas de engajamento, alcance e impressões do TikTok"
-              loading="lazy"
-              ratio="4 / 3"
+                ratio="4 / 3"
               className="w-full"
             /></Reveal>
           </div>
@@ -400,7 +398,6 @@ function Parceria() {
           <SmoothImage
             src={parceriaImg}
             alt="Melissa Costa de óculos escuros nas dunas ao entardecer"
-            loading="lazy"
             ratio="4 / 5"
             className="w-full object-cover"
           />
@@ -476,7 +473,6 @@ function Investimento() {
           <SmoothImage
             src={tabelaImg}
             alt="Melissa Costa em camisa rosa ao lado de uma arara de roupas"
-            loading="lazy"
             ratio="4 / 5"
             className="w-full object-cover"
           />
