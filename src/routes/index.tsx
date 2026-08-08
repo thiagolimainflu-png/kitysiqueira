@@ -6,6 +6,7 @@ import { SmoothImage } from "@/components/SmoothImage";
 import { SiteHeader } from "@/components/SiteHeader";
 import { WhatsAppFab, WHATSAPP_URL } from "@/components/WhatsAppFab";
 import heroImg from "@/assets/hero-melissa.jpg";
+import heroThumb from "@/assets/hero-melissa-thumb.jpg";
 import sobreImg from "@/assets/sobre-melissa.jpg";
 import parceriaImg from "@/assets/parceria-melissa.jpg";
 import tabelaImg from "@/assets/tabela-melissa.jpg";
@@ -95,6 +96,8 @@ function Hero() {
           src={heroImg}
           alt="Melissa Costa em vestido rosa ao lado de uma parede florida"
           priority
+          placeholder={heroThumb}
+          objectPosition="object-top"
           wrapperClassName="h-[62vh] min-h-[380px] w-full"
           className="h-[62vh] min-h-[380px] w-full object-cover object-top"
         />
