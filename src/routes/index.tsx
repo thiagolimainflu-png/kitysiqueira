@@ -106,24 +106,25 @@ function Hero() {
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-dark to-transparent" />
       </div>
       <div className="float-soft relative -mt-16 ml-0 w-fit bg-rose-soft px-7 py-4 text-ink shadow-[0_18px_40px_-24px_rgba(0,0,0,0.7)]">
-        <p className="font-display text-2xl leading-none">3.8M</p>
+        <p className="font-display text-2xl leading-none">8.9K</p>
         <p className="mt-1 text-[0.65rem] tracking-[0.18em] uppercase">
-          Interações/mês
+          Seguidores
         </p>
       </div>
 
       <div className="relative px-5 pb-16 pt-12 text-center sm:px-8">
         <span className="watermark">Bianca</span>
         <div className="relative mx-auto max-w-3xl">
-          <Reveal delay={60}><Eyebrow>Influenciadora digital · Moda &amp; Lifestyle</Eyebrow></Reveal>
+          <Reveal delay={60}><Eyebrow>Criadora de conteúdo digital · Cristã, rotina &amp; humor</Eyebrow></Reveal>
           <Reveal delay={160}><h1 className="mt-6 font-display text-4xl leading-[1.12] sm:text-6xl">
-            Transformando estética em{" "}
-            <em className="italic text-rose-soft">influência que vende.</em>
+            Fé, rotina e humor que viram{" "}
+            <em className="italic text-rose-soft">conexão de verdade.</em>
           </h1></Reveal>
           <Reveal delay={260}><p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-dark-muted sm:text-base">
-            Moda, lifestyle e performance com autenticidade, estratégia e alto
-            poder de decisão.
+            Siiiim menina! Conteúdo leve, cristão e cheio de identificação — com
+            uma comunidade que acompanha de perto e confia no que eu indico.
           </p></Reveal>
+
 
           <Reveal delay={340} className="mx-auto mt-10 flex max-w-sm flex-col gap-3">
             <CtaWhats className="bg-rose text-white">
