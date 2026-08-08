@@ -160,7 +160,7 @@ function Hero() {
 }
 
 function Sobre() {
-  const tags = ["Moda", "Lifestyle", "Beleza", "Bem-estar", "Performance"];
+  const tags = ["Cristã", "Rotina", "Humor", "Lifestyle", "Publis"];
   return (
     <section id="sobre" className="bg-cream px-5 py-16 sm:px-8">
       <div className="mx-auto max-w-3xl">
