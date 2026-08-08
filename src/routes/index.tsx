@@ -45,14 +45,15 @@ function useInView<T extends HTMLElement>() {
     const el = ref.current;
     if (!el) return;
     const io = new IntersectionObserver(
-      ([e]) => {
-        if (e.isIntersecting) {
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
           setSeen(true);
           io.disconnect();
         }
       },
       { threshold: 0.25 },
     );
+
     io.observe(el);
     return () => io.disconnect();
   }, []);
