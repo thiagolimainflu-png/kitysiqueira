@@ -6,8 +6,8 @@ import { Reveal } from "@/components/Reveal";
 import { SmoothImage } from "@/components/SmoothImage";
 import { SiteHeader } from "@/components/SiteHeader";
 import { WhatsAppFab, WHATSAPP_URL } from "@/components/WhatsAppFab";
-import heroImg from "@/assets/hero-melissa.jpg";
-import heroThumb from "@/assets/hero-melissa-thumb.jpg";
+import heroAsset from "@/assets/hero-bianca.jpg.asset.json";
+import heroThumb from "@/assets/hero-bianca-thumb.jpg";
 import sobreImg from "@/assets/sobre-melissa.jpg";
 
 const EMAIL = "contato.bianncapires@gmail.com";
@@ -93,8 +93,8 @@ function Hero() {
     <section id="top" className="band-dark relative overflow-hidden">
       <div className="img-frame relative">
         <SmoothImage
-          src={heroImg}
-          alt="Bianca Pires, criadora de conteúdo digital"
+          src={heroAsset.url}
+          alt="Bianca Pires sorrindo, com vestido floral rosa ao lado de um arranjo de flores"
           priority
           placeholder={heroThumb}
           objectPosition="object-top"
