@@ -174,7 +174,7 @@ function Sobre() {
         </Reveal>
         <Reveal as="figure" delay={120} className="bg-card px-6 py-7 shadow-[0_10px_30px_-24px_rgba(0,0,0,0.5)]">
           <blockquote className="font-display text-base italic">
-            &ldquo;Influência que gera resultado real.&rdquo;
+            &ldquo;Siiiim menina! Fica aqui comigo.&rdquo;
           </blockquote>
         </Reveal>
 
@@ -182,25 +182,26 @@ function Sobre() {
           <Eyebrow>Quem sou</Eyebrow>
           <h2 className="mt-6 font-display text-3xl leading-[1.15] sm:text-5xl">
             Mais do que uma criadora.{" "}
-            <em className="italic text-rose">Uma estrategista.</em>
+            <em className="italic text-rose">Uma amiga do público.</em>
           </h2>
           <div className="mt-7 space-y-5 text-sm leading-loose text-muted-foreground sm:text-base">
             <p>
-              Bianca Pires é criadora de conteúdo digital que fala de fé, rotina e
-              humor — sempre com leveza, verdade e proximidade com quem
+              Bianca Pires é criadora de conteúdo digital que fala de fé, rotina
+              e humor — sempre com leveza, verdade e proximidade com quem
               acompanha.
             </p>
             <p>
-              Acadêmica de Medicina, compartilha uma rotina disciplinada e real
-              — conciliando estudos, treinos e produção de conteúdo, conectando
-              saúde, performance e estilo de vida.
+              No perfil @bianncapires, divide o dia a dia, a caminhada cristã e
+              aquelas situações do cotidiano que rendem risada e identificação
+              imediata.
             </p>
             <p>
-              Seu conteúdo vai além da estética: cria conexão, influencia
-              decisões e transforma seguidores em consumidores. Trabalha com
-              marcas que buscam posicionamento, desejo e resultado.
+              É essa confiança que faz as publis funcionarem: quando indico algo,
+              a comunidade escuta, comenta e vai atrás. Publis e parcerias pelo
+              direct.
             </p>
           </div>
+
           <ul className="mt-9 flex flex-wrap gap-2">
             {tags.map((t) => (
               <li
