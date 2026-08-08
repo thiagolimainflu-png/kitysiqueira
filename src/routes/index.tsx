@@ -663,7 +663,7 @@ function Footer() {
       <p className="mt-6 text-xs text-dark-muted/70">
         © 2025 Melissa Costa · Todos os direitos reservados
       </p>
-      <div className="mt-6 flex justify-center gap-8 text-[0.62rem] tracking-[0.22em] text-dark-muted/70 uppercase">
+      <div className="mt-6 flex justify-center gap-8 text-[0.62rem] tracking-[0.22em] text-dark-muted/70 uppercase [&_a]:transition-colors [&_a:hover]:text-dark-foreground">
         <a
           href="https://instagram.com/melissasoucostaa"
           target="_blank"

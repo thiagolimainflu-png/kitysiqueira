@@ -24,8 +24,10 @@ export function SiteHeader() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        solid || open ? "bg-cream shadow-[0_1px_0_rgba(0,0,0,0.06)]" : "bg-transparent"
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+        solid || open
+          ? "bg-cream/85 backdrop-blur-xl shadow-[0_1px_0_rgba(0,0,0,0.06)]"
+          : "bg-transparent"
       }`}
     >
       <div className="mx-auto grid max-w-5xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 sm:px-8">
@@ -63,14 +65,14 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <nav className="border-t border-border bg-cream px-5 pb-8 pt-4 sm:px-8">
+        <nav className="animate-fade-in border-t border-border bg-cream/95 px-5 pb-8 pt-4 backdrop-blur-xl sm:px-8">
           <ul className="mx-auto max-w-5xl space-y-1">
             {links.map((l) => (
               <li key={l.href}>
                 <a
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="block border-b border-border/60 py-3 font-display text-xl text-ink"
+                  className="block border-b border-border/60 py-3 font-display text-xl text-ink transition-[padding,color] duration-500 hover:pl-2 hover:text-rose"
                 >
                   {l.label}
                 </a>
