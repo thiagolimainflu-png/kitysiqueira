@@ -140,10 +140,11 @@ function Hero() {
 
           <Reveal as="dl" delay={440} className="mt-14 grid grid-cols-3 gap-2">
             {[
-              ["436K", "Instagram"],
-              ["205K", "TikTok"],
-              ["62M+", "Views totais"],
+              ["8.991", "Seguidores"],
+              ["232", "Publicações"],
+              ["941", "Seguindo"],
             ].map(([n, l]) => (
+
               <div key={l}>
                 <dt className="font-display text-2xl sm:text-3xl">{n}</dt>
                 <dd className="mt-2 text-[0.6rem] tracking-[0.18em] text-dark-muted uppercase">
