@@ -36,7 +36,7 @@ export function SiteHeader() {
             solid || open ? "text-ink" : "text-dark-foreground"
           }`}
         >
-          Melissa Costa
+          Bianca Pires
         </a>
         <button
           type="button"

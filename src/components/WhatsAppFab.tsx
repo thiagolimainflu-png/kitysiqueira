@@ -1,5 +1,5 @@
 export const WHATSAPP_URL =
-  "https://wa.me/5585999521373?text=Ol%C3%A1%20Melissa!%20Quero%20fazer%20uma%20parceria.";
+  "https://wa.me/5585999521373?text=Ol%C3%A1%20Bianca!%20Quero%20fazer%20uma%20parceria.";
 
 export function WhatsAppFab() {
   return (
