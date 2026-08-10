@@ -172,23 +172,26 @@ function Hero() {
 function Sobre() {
   const tags = ["Life Style", "Moda", "Beleza", "Maternidade"];
   return (
-    <section id="sobre" className="bg-cream px-5 py-16 sm:px-8">
-      <div className="mx-auto max-w-3xl">
-        <Reveal variant="scale" className="img-frame">
-          <SmoothImage
-            src={sobreImg}
-            alt="Talita Costa, criadora de conteúdo digital"
-            ratio="1 / 1"
-            className="w-full object-cover"
-          />
-        </Reveal>
-        <Reveal as="figure" delay={120} className="bg-card px-6 py-7 shadow-[0_10px_30px_-24px_rgba(0,0,0,0.5)]">
-          <blockquote className="font-display text-base italic">
-            &ldquo;Oii, Mermãs! Fica aqui comigo.&rdquo;
-          </blockquote>
-        </Reveal>
+    <section id="sobre" className="bg-cream px-5 py-16 sm:px-8 lg:py-28">
+      <div className="mx-auto max-w-3xl lg:grid lg:max-w-6xl lg:grid-cols-2 lg:items-start lg:gap-16">
+        <div className="lg:sticky lg:top-28">
+          <Reveal variant="scale" className="img-frame">
+            <SmoothImage
+              src={sobreImg}
+              alt="Talita Costa, criadora de conteúdo digital"
+              ratio="1 / 1"
+              className="w-full object-cover"
+            />
+          </Reveal>
+          <Reveal as="figure" delay={120} className="bg-card px-6 py-7 shadow-[0_10px_30px_-24px_rgba(0,0,0,0.5)]">
+            <blockquote className="font-display text-base italic">
+              &ldquo;Oii, Mermãs! Fica aqui comigo.&rdquo;
+            </blockquote>
+          </Reveal>
+        </div>
 
-        <Reveal className="mt-14">
+        <Reveal className="mt-14 lg:mt-0">
+
           <Eyebrow>Quem sou</Eyebrow>
           <h2 className="mt-6 font-display text-3xl leading-[1.15] sm:text-5xl">
             Mais do que uma criadora.{" "}
