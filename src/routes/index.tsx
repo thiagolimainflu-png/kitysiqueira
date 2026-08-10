@@ -336,13 +336,21 @@ function Audiencia() {
           ))}
         </div>
 
-        <div className="mt-12 grid gap-10 sm:grid-cols-3">
-          {insightsPrints.map(([src, alt, caption], i) => (
-            <Reveal key={caption} delay={i * 110}>
-              <PhoneMockup src={src} alt={alt} caption={caption} />
-            </Reveal>
-          ))}
+        <div className="mt-12 -mx-6 px-6 sm:mx-0 sm:px-0">
+          <div className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:gap-10">
+            {insightsPrints.map(([src, alt, caption], i) => (
+              <Reveal key={caption} delay={i * 110}>
+                <div className="w-[68vw] max-w-[280px] shrink-0 snap-center sm:w-[300px]">
+                  <PhoneMockup src={src} alt={alt} caption={caption} />
+                </div>
+              </Reveal>
+            ))}
+          </div>
+          <p className="text-center text-xs text-muted-foreground sm:hidden">
+            arraste para o lado →
+          </p>
         </div>
+
 
       </div>
     </section>
