@@ -6,8 +6,8 @@ import p5 from "@/assets/post-katy-5.jpg";
 import p6 from "@/assets/post-katy-6.jpg";
 
 const POSTS = [
-  { src: p1, href: "https://www.instagram.com/katysiqueiraa/p/DUEY4yblIRj/" },
-  { src: p2, href: "https://www.instagram.com/katysiqueiraa/p/DP8zAFPDmUX/" },
+  { src: p1, href: "https://www.instagram.com/p/Db0peaQTyAL/" },
+  { src: p2, href: "https://www.instagram.com/p/DbyomkkzK1Y/" },
   { src: p3, href: "https://www.instagram.com/katysiqueiraa/reel/DDDDXr5SP2c/" },
   { src: p4, href: "https://www.instagram.com/katysiqueiraa/reel/Db3ZIYZzD6B/" },
   { src: p5, href: "https://www.instagram.com/katysiqueiraa/reel/Db23QQnz7eI/" },
