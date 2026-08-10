@@ -16,7 +16,6 @@ import insightsPublico from "@/assets/insights-publico.jpg";
 import insightsStories from "@/assets/insights-stories.jpg";
 
 
-const EMAIL = "contato.talitaacosta@gmail.com";
 const TELEFONE = "(84) 9109-2827 · publis e parcerias";
 
 export const Route = createFileRoute("/")({
@@ -532,7 +531,7 @@ function Contato() {
           posso gerar resultados reais para a sua marca.
         </p>
 
-        <div className="mx-auto mt-12 flex max-w-md flex-col gap-3 sm:flex-row">
+        <div className="mx-auto mt-12 flex max-w-md flex-col gap-3">
           <a
             href={WHATSAPP_URL}
             target="_blank"
@@ -544,19 +543,9 @@ function Contato() {
             </svg>
             WhatsApp
           </a>
-          <a
-            href={`mailto:${EMAIL}`}
-            className="btn-sheen flex-1 border border-white/35 px-6 py-4 text-xs font-semibold tracking-[0.2em] uppercase"
-          >
-            E-mail
-          </a>
         </div>
 
         <div className="mt-14 space-y-4 text-sm text-dark-muted">
-          <p>
-            <span className="emoji mr-3">📧</span>
-            <a href={`mailto:${EMAIL}`} className="link-underline">{EMAIL}</a>
-          </p>
           <p>
             <span className="emoji mr-3">📱</span>
             {TELEFONE}
