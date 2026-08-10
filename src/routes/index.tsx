@@ -470,8 +470,8 @@ const marcas = [
   "MODA",
   "BELEZA",
   "CASA",
-  "IGREJA",
-  "LOCAIS",
+  "GASTRONOMIA",
+  "TURISMO",
   "+ PARCERIAS",
 ];
 
