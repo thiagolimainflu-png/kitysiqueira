@@ -635,8 +635,6 @@ function Home() {
         <Audiencia />
         <Conteudos />
         <Parceria />
-        
-        <Diferenciais />
         <Portfolio />
         <Contato />
       </main>
