@@ -367,12 +367,13 @@ function Conteudos() {
         <Reveal className="text-center">
           <Eyebrow>Conteúdos</Eyebrow>
           <h2 className="mt-6 font-display text-3xl leading-[1.15] sm:text-5xl">
-            Alguns posts que <em className="italic text-rose">performaram bem.</em>
+            Destaques <em className="italic text-rose">recentes</em>
           </h2>
           <p className="mt-4 text-sm text-muted-foreground">
             Publicações reais do perfil, com entrega orgânica e engajamento consistente.
           </p>
         </Reveal>
+
         <Reveal delay={120}>
           <div className="mt-12">
             <InstagramPosts />
