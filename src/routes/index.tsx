@@ -374,7 +374,7 @@ function Audiencia() {
 
 function Conteudos() {
   return (
-    <section id="conteudos" className="bg-cream px-5 py-16 sm:px-8">
+    <section id="conteudos" className="bg-cream px-5 py-16 sm:px-8 lg:py-28">
       <div className="mx-auto max-w-5xl">
         <Reveal className="text-center">
           <Eyebrow>Conteúdos</Eyebrow>
@@ -424,8 +424,8 @@ const formatos = [
 
 function Parceria() {
   return (
-    <section id="parceria" className="bg-secondary px-5 py-20 sm:px-8">
-      <div className="mx-auto max-w-5xl">
+    <section id="parceria" className="bg-secondary px-5 py-20 sm:px-8 lg:py-28">
+      <div className="mx-auto max-w-5xl lg:max-w-6xl">
         <Reveal className="text-center">
           <p className="text-[0.68rem] tracking-[0.24em] text-primary uppercase">
             Formatos
@@ -437,7 +437,7 @@ function Parceria() {
           </h2>
         </Reveal>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           {formatos.map((f, i) => {
             const Icon = f.icon;
             return (
@@ -495,8 +495,8 @@ const marcas = [
 
 function Portfolio() {
   return (
-    <section id="portfolio" className="bg-cream px-5 pb-16 sm:px-8">
-      <Reveal className="mx-auto max-w-3xl text-center">
+    <section id="portfolio" className="bg-cream px-5 pb-16 sm:px-8 lg:pb-28">
+      <Reveal className="mx-auto max-w-3xl text-center lg:max-w-5xl">
         <Eyebrow>Portfólio</Eyebrow>
         <h2 className="mt-6 font-display text-3xl sm:text-4xl">
           Segmentos que combinam
@@ -505,7 +505,7 @@ function Portfolio() {
           com o meu conteúdo
         </p>
 
-        <ul className="mt-10 grid grid-cols-3 border-t border-l border-border">
+        <ul className="mt-10 grid grid-cols-3 border-t border-l border-border lg:grid-cols-6">
           {marcas.map((m) => (
             <li
               key={m}
@@ -522,7 +522,7 @@ function Portfolio() {
 
 function Contato() {
   return (
-    <section id="contato" className="band-dark relative overflow-hidden px-5 py-20 sm:px-8">
+    <section id="contato" className="band-dark relative overflow-hidden px-5 py-20 sm:px-8 lg:py-32">
       <span className="watermark">Juntos</span>
       <Reveal className="relative mx-auto max-w-2xl text-center">
         <Eyebrow>Contato</Eyebrow>
