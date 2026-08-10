@@ -36,7 +36,7 @@ export function SiteHeader() {
             solid || open ? "text-ink" : "text-dark-foreground"
           }`}
         >
-          Bianca Pires
+          Talita Costa
         </a>
         <button
           type="button"

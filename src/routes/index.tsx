@@ -10,26 +10,26 @@ import heroImg from "@/assets/hero-bianca.jpg";
 import heroThumb from "@/assets/hero-bianca-thumb.jpg";
 import sobreImg from "@/assets/sobre-bianca.jpg";
 
-const EMAIL = "contato.bianncapires@gmail.com";
+const EMAIL = "contato.talitaacosta@gmail.com";
 const TELEFONE = "Publis e parcerias no direct";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Bianca Pires | Criadora de Conteúdo Digital" },
+      { title: "Talita Costa | Criadora de Conteúdo Digital" },
       {
         name: "description",
         content:
-          "Bianca Pires (@bianncapires): mais de 9 mil seguidores no Instagram com conteúdo de fé, rotina e humor. Publis e parcerias que geram conexão real.",
+          "Talita Costa (@eu.talitaacosta): 16,9 mil seguidores no Instagram com conteúdo estratégico, marketing e vida real. Publis e parcerias que geram resultado.",
       },
       {
         property: "og:title",
-        content: "Bianca Pires | Criadora de Conteúdo Digital",
+        content: "Talita Costa | Criadora de Conteúdo Digital",
       },
       {
         property: "og:description",
         content:
-          "Cristã, rotina e humor. 231 publicações e uma comunidade engajada de 9.132 seguidores. Parcerias com marcas que querem proximidade e confiança.",
+          "Marketing e vida real. 1.650 publicações e uma comunidade de 16,9 mil seguidores em Pres. Figueiredo (AM). Parcerias com marcas que querem autenticidade.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -94,7 +94,7 @@ function Hero() {
       <div className="img-frame relative">
         <SmoothImage
           src={heroImg}
-          alt="Bianca Pires sorrindo, com vestido floral rosa ao lado de um arranjo de flores"
+          alt="Talita Costa em blazer preto, retrato em estúdio com luz difusa"
           priority
           placeholder={heroThumb}
           objectPosition="object-top"
@@ -104,23 +104,24 @@ function Hero() {
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-dark to-transparent" />
       </div>
       <div className="float-soft relative -mt-16 ml-0 w-fit bg-rose-soft px-7 py-4 text-ink shadow-[0_18px_40px_-24px_rgba(0,0,0,0.7)]">
-        <p className="font-display text-2xl leading-none">9.1K</p>
+        <p className="font-display text-2xl leading-none">16,9K</p>
         <p className="mt-1 text-[0.65rem] tracking-[0.18em] uppercase">
           Seguidores
         </p>
       </div>
 
       <div className="relative px-5 pb-16 pt-12 text-center sm:px-8">
-        <span className="watermark">Bianca</span>
+        <span className="watermark">Talita</span>
         <div className="relative mx-auto max-w-3xl">
-          <Reveal delay={60}><Eyebrow>Criadora de conteúdo digital · Cristã, rotina &amp; humor</Eyebrow></Reveal>
+          <Reveal delay={60}><Eyebrow>Criadora de conteúdo digital · Marketing &amp; vida real</Eyebrow></Reveal>
           <Reveal delay={160}><h1 className="mt-6 font-display text-4xl leading-[1.12] sm:text-6xl">
-            Fé, rotina e humor que viram{" "}
-            <em className="italic text-rose-soft">conexão de verdade.</em>
+            Conteúdo estratégico e autêntico que{" "}
+            <em className="italic text-rose-soft">gera resultado.</em>
           </h1></Reveal>
           <Reveal delay={260}><p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-dark-muted sm:text-base">
-            Siiiim menina! Conteúdo leve, cristão e cheio de identificação — com
-            uma comunidade que acompanha de perto e confia no que eu indico.
+            Oii, Mermãs! Sou Talita Costa, de Pres. Figueiredo (AM). Crio
+            conteúdo real, com uma comunidade que acompanha de perto e confia no
+            que eu indico.
           </p></Reveal>
 
 
@@ -138,9 +139,9 @@ function Hero() {
 
           <Reveal as="dl" delay={440} className="mt-14 grid grid-cols-3 gap-2">
             {[
-              ["9.132", "Seguidores"],
-              ["231", "Publicações"],
-              ["942", "Seguindo"],
+              ["16,9 mil", "Seguidores"],
+              ["1.650", "Publicações"],
+              ["6.001", "Seguindo"],
             ].map(([n, l]) => (
 
               <div key={l}>
@@ -158,21 +159,21 @@ function Hero() {
 }
 
 function Sobre() {
-  const tags = ["Cristã", "Rotina", "Humor", "Lifestyle", "Publis"];
+  const tags = ["Marketing", "Lifestyle", "Maternidade", "Vida real", "Publis"];
   return (
     <section id="sobre" className="bg-cream px-5 py-16 sm:px-8">
       <div className="mx-auto max-w-3xl">
         <Reveal variant="scale" className="img-frame">
           <SmoothImage
             src={sobreImg}
-            alt="Bianca Pires sorrindo em vestido floral colorido, ao pôr do sol na praia"
+            alt="Talita Costa, criadora de conteúdo digital"
             ratio="1 / 1"
             className="w-full object-cover"
           />
         </Reveal>
         <Reveal as="figure" delay={120} className="bg-card px-6 py-7 shadow-[0_10px_30px_-24px_rgba(0,0,0,0.5)]">
           <blockquote className="font-display text-base italic">
-            &ldquo;Siiiim menina! Fica aqui comigo.&rdquo;
+            &ldquo;Oii, Mermãs! Fica aqui comigo.&rdquo;
           </blockquote>
         </Reveal>
 
@@ -184,14 +185,14 @@ function Sobre() {
           </h2>
           <div className="mt-7 space-y-5 text-sm leading-loose text-muted-foreground sm:text-base">
             <p>
-              Bianca Pires é criadora de conteúdo digital que fala de fé, rotina
-              e humor — sempre com leveza, verdade e proximidade com quem
-              acompanha.
+              Talita Costa é criadora de conteúdo digital em Pres. Figueiredo
+              (AM). Crio conteúdo estratégico e autêntico que gera resultado
+              para as marcas parceiras.
             </p>
             <p>
-              No perfil @bianncapires, divide o dia a dia, a caminhada cristã e
-              aquelas situações do cotidiano que rendem risada e identificação
-              imediata.
+              No perfil @eu.talitaacosta, falo de marketing e vida real, divido
+              a rotina de mãe de 3 (e mãe de pet) e mostro o dia a dia com
+              leveza e identificação.
             </p>
             <p>
               É essa confiança que faz as publis funcionarem: quando indico algo,
@@ -217,8 +218,8 @@ function Sobre() {
 }
 
 const numeros: [string, string, string][] = [
-  ["Instagram", "9.132", "Seguidores"],
-  ["Instagram", "231", "Publicações"],
+  ["Instagram", "16,9 mil", "Seguidores"],
+  ["Instagram", "1.650", "Publicações"],
   ["Instagram · Reels", "Alto", "Alcance orgânico"],
   ["Instagram · Stories", "Diário", "Presença nos stories"],
 ];
@@ -270,12 +271,12 @@ function Numeros() {
 const barras: [string, number][] = [
   ["Feminino", 85],
   ["18-44 anos", 74],
-  ["Nordeste", 68],
+  ["Amazonas e Norte", 68],
 ];
 
 const audienciaCards: [string, string, string][] = [
   ["👩", "85%", "Público feminino"],
-  ["🙏", "Cristão", "Valores e estilo de vida"],
+  ["🏠", "Mães", "Rotina, casa e família"],
   ["🛍️", "18-44", "Faixa etária principal"],
   ["💬", "Alto", "Engajamento e confiança"],
 ];
@@ -469,8 +470,8 @@ const marcas = [
   "MODA",
   "BELEZA",
   "CASA",
-  "IGREJA",
-  "LOCAIS",
+  "GASTRONOMIA",
+  "TURISMO",
   "+ PARCERIAS",
 ];
 
@@ -554,20 +555,20 @@ function Contato() {
 function Footer() {
   return (
     <footer className="bg-[#0d0b0b] px-5 py-14 text-center sm:px-8">
-      <p className="font-display text-2xl text-dark-muted">Bianca Pires</p>
+      <p className="font-display text-2xl text-dark-muted">Talita Costa</p>
       <p className="mt-6 text-xs text-dark-muted/70">
-        © 2026 Bianca Pires · Todos os direitos reservados
+        © 2026 Talita Costa · Todos os direitos reservados
       </p>
       <div className="mt-6 flex justify-center gap-8 text-[0.62rem] tracking-[0.22em] text-dark-muted/70 uppercase [&_a]:transition-colors [&_a:hover]:text-dark-foreground">
         <a
-          href="https://instagram.com/bianncapires"
+          href="https://instagram.com/eu.talitaacosta"
           target="_blank"
           rel="noopener noreferrer"
         >
           Instagram
         </a>
         <a
-          href="https://instagram.com/bianncapires"
+          href="https://instagram.com/eu.talitaacosta"
           target="_blank"
           rel="noopener noreferrer"
         >
