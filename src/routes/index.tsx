@@ -85,7 +85,7 @@ function CtaWhats({
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className={`btn-sheen block w-full px-6 py-4 text-center text-xs font-semibold tracking-[0.2em] uppercase ${className}`}
+      className={`btn-sheen block w-full px-6 py-4 text-center text-xs font-semibold tracking-[0.2em] uppercase lg:whitespace-nowrap lg:px-8 ${className}`}
     >
       {children}
     </a>
@@ -134,13 +134,13 @@ function Hero() {
             </p></Reveal>
 
 
-            <Reveal delay={340} className="mx-auto mt-10 flex max-w-sm flex-col gap-3 lg:mx-0 lg:max-w-xl lg:flex-row">
+            <Reveal delay={340} className="mx-auto mt-10 flex max-w-sm flex-col gap-3 lg:mx-0 lg:max-w-2xl lg:flex-row">
               <CtaWhats className="bg-rose text-white">
                 Quero anunciar com você
               </CtaWhats>
               <a
                 href="#numeros"
-                className="btn-sheen block w-full border border-white/35 px-6 py-4 text-center text-xs font-semibold tracking-[0.2em] uppercase"
+                className="btn-sheen block w-full border border-white/35 px-6 py-4 text-center text-xs font-semibold tracking-[0.2em] uppercase lg:whitespace-nowrap lg:px-8"
               >
                 Ver resultados
               </a>
