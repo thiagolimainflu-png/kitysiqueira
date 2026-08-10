@@ -159,21 +159,21 @@ function Hero() {
 }
 
 function Sobre() {
-  const tags = ["Cristã", "Rotina", "Humor", "Lifestyle", "Publis"];
+  const tags = ["Marketing", "Lifestyle", "Maternidade", "Vida real", "Publis"];
   return (
     <section id="sobre" className="bg-cream px-5 py-16 sm:px-8">
       <div className="mx-auto max-w-3xl">
         <Reveal variant="scale" className="img-frame">
           <SmoothImage
             src={sobreImg}
-            alt="Bianca Pires sorrindo em vestido floral colorido, ao pôr do sol na praia"
+            alt="Talita Costa, criadora de conteúdo digital"
             ratio="1 / 1"
             className="w-full object-cover"
           />
         </Reveal>
         <Reveal as="figure" delay={120} className="bg-card px-6 py-7 shadow-[0_10px_30px_-24px_rgba(0,0,0,0.5)]">
           <blockquote className="font-display text-base italic">
-            &ldquo;Siiiim menina! Fica aqui comigo.&rdquo;
+            &ldquo;Oii, Mermãs! Fica aqui comigo.&rdquo;
           </blockquote>
         </Reveal>
 
@@ -185,14 +185,14 @@ function Sobre() {
           </h2>
           <div className="mt-7 space-y-5 text-sm leading-loose text-muted-foreground sm:text-base">
             <p>
-              Bianca Pires é criadora de conteúdo digital que fala de fé, rotina
-              e humor — sempre com leveza, verdade e proximidade com quem
-              acompanha.
+              Talita Costa é criadora de conteúdo digital em Pres. Figueiredo
+              (AM). Crio conteúdo estratégico e autêntico que gera resultado
+              para as marcas parceiras.
             </p>
             <p>
-              No perfil @bianncapires, divide o dia a dia, a caminhada cristã e
-              aquelas situações do cotidiano que rendem risada e identificação
-              imediata.
+              No perfil @eu.talitaacosta, falo de marketing e vida real, divido
+              a rotina de mãe de 3 (e mãe de pet) e mostro o dia a dia com
+              leveza e identificação.
             </p>
             <p>
               É essa confiança que faz as publis funcionarem: quando indico algo,
