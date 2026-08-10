@@ -94,7 +94,7 @@ function Hero() {
       <div className="img-frame relative">
         <SmoothImage
           src={heroImg}
-          alt="Bianca Pires sorrindo, com vestido floral rosa ao lado de um arranjo de flores"
+          alt="Talita Costa em blazer preto, retrato em estúdio com luz difusa"
           priority
           placeholder={heroThumb}
           objectPosition="object-top"
@@ -104,23 +104,24 @@ function Hero() {
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-dark to-transparent" />
       </div>
       <div className="float-soft relative -mt-16 ml-0 w-fit bg-rose-soft px-7 py-4 text-ink shadow-[0_18px_40px_-24px_rgba(0,0,0,0.7)]">
-        <p className="font-display text-2xl leading-none">9.1K</p>
+        <p className="font-display text-2xl leading-none">16,9K</p>
         <p className="mt-1 text-[0.65rem] tracking-[0.18em] uppercase">
           Seguidores
         </p>
       </div>
 
       <div className="relative px-5 pb-16 pt-12 text-center sm:px-8">
-        <span className="watermark">Bianca</span>
+        <span className="watermark">Talita</span>
         <div className="relative mx-auto max-w-3xl">
-          <Reveal delay={60}><Eyebrow>Criadora de conteúdo digital · Cristã, rotina &amp; humor</Eyebrow></Reveal>
+          <Reveal delay={60}><Eyebrow>Criadora de conteúdo digital · Marketing &amp; vida real</Eyebrow></Reveal>
           <Reveal delay={160}><h1 className="mt-6 font-display text-4xl leading-[1.12] sm:text-6xl">
-            Fé, rotina e humor que viram{" "}
-            <em className="italic text-rose-soft">conexão de verdade.</em>
+            Conteúdo estratégico e autêntico que{" "}
+            <em className="italic text-rose-soft">gera resultado.</em>
           </h1></Reveal>
           <Reveal delay={260}><p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-dark-muted sm:text-base">
-            Siiiim menina! Conteúdo leve, cristão e cheio de identificação — com
-            uma comunidade que acompanha de perto e confia no que eu indico.
+            Oii, Mermãs! Sou Talita Costa, de Pres. Figueiredo (AM). Crio
+            conteúdo real, com uma comunidade que acompanha de perto e confia no
+            que eu indico.
           </p></Reveal>
 
 
@@ -138,9 +139,9 @@ function Hero() {
 
           <Reveal as="dl" delay={440} className="mt-14 grid grid-cols-3 gap-2">
             {[
-              ["9.132", "Seguidores"],
-              ["231", "Publicações"],
-              ["942", "Seguindo"],
+              ["16,9 mil", "Seguidores"],
+              ["1.650", "Publicações"],
+              ["6.001", "Seguindo"],
             ].map(([n, l]) => (
 
               <div key={l}>
