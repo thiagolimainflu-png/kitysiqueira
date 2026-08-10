@@ -243,8 +243,8 @@ const numeros: [string, string, string][] = [
 
 function Numeros() {
   return (
-    <section id="numeros" className="band-dark px-5 py-16 sm:px-8">
-      <div className="mx-auto max-w-3xl">
+    <section id="numeros" className="band-dark px-5 py-16 sm:px-8 lg:py-28">
+      <div className="mx-auto max-w-3xl lg:max-w-6xl">
         <Reveal className="text-center">
           <Eyebrow>Prova social</Eyebrow>
           <h2 className="mt-6 font-display text-3xl leading-[1.15] sm:text-5xl">
@@ -257,23 +257,24 @@ function Numeros() {
           </p>
         </Reveal>
 
-        <div className="mt-12 border border-white/10">
+        <div className="mt-12 grid border-t border-l border-white/10 sm:grid-cols-2 lg:grid-cols-4">
           {numeros.map(([rede, valor, label], i) => (
             <Reveal
               key={valor + label}
               delay={i * 90}
-              className={`px-6 py-10 text-center ${i > 0 ? "border-t border-white/10" : ""}`}
+              className="border-r border-b border-white/10 px-6 py-10 text-center"
             >
               <p className="text-[0.6rem] tracking-[0.22em] text-rose-soft uppercase">
                 {rede}
               </p>
-              <p className="mt-5 font-display text-4xl sm:text-5xl">{valor}</p>
+              <p className="mt-5 font-display text-4xl sm:text-5xl lg:text-4xl">{valor}</p>
               <p className="mt-3 text-[0.65rem] tracking-[0.18em] text-dark-muted uppercase">
                 {label}
               </p>
             </Reveal>
           ))}
         </div>
+
 
         <p className="mt-10 text-center font-display text-sm italic text-dark-muted">
           Comunidade pequena no número, gigante na confiança.
