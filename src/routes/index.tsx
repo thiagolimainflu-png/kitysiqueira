@@ -313,8 +313,8 @@ const insightsPrints: [string, string, string][] = [
 function Audiencia() {
   const { ref, seen } = useInView<HTMLDivElement>();
   return (
-    <section id="audiencia" className="bg-cream-deep px-5 py-16 sm:px-8">
-      <div className="mx-auto max-w-3xl">
+    <section id="audiencia" className="bg-cream-deep px-5 py-16 sm:px-8 lg:py-28">
+      <div className="mx-auto max-w-3xl lg:max-w-6xl">
         <Reveal className="text-center">
           <Eyebrow>Audiência</Eyebrow>
           <h2 className="mt-6 font-display text-3xl leading-[1.15] sm:text-5xl">
@@ -326,42 +326,45 @@ function Audiencia() {
           </p>
         </Reveal>
 
-        <div ref={ref} className="mt-12 space-y-6">
-          {barras.map(([label, pct]) => (
-            <div
-              key={label}
-              className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4"
-            >
-              <div className="min-w-0">
-                <p className="text-[0.62rem] tracking-[0.18em] text-muted-foreground uppercase">
-                  {label}
-                </p>
-                <div className="mt-3 h-[3px] w-full bg-border">
-                  <div
-                    className="h-full bg-rose transition-[width] duration-[1400ms] ease-out"
-                    style={{ width: seen ? `${pct}%` : "0%" }}
-                  />
+        <div className="lg:mt-6 lg:grid lg:grid-cols-[minmax(0,320px)_1fr] lg:items-center lg:gap-16">
+          <div ref={ref} className="mt-12 space-y-6 lg:mt-0">
+            {barras.map(([label, pct]) => (
+              <div
+                key={label}
+                className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4"
+              >
+                <div className="min-w-0">
+                  <p className="text-[0.62rem] tracking-[0.18em] text-muted-foreground uppercase">
+                    {label}
+                  </p>
+                  <div className="mt-3 h-[3px] w-full bg-border">
+                    <div
+                      className="h-full bg-rose transition-[width] duration-[1400ms] ease-out"
+                      style={{ width: seen ? `${pct}%` : "0%" }}
+                    />
+                  </div>
                 </div>
+                <span className="shrink-0 font-display text-lg">{pct}%</span>
               </div>
-              <span className="shrink-0 font-display text-lg">{pct}%</span>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-12 -mx-6 px-6 sm:mx-0 sm:px-0">
-          <div className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:gap-10">
-            {insightsPrints.map(([src, alt, caption], i) => (
-              <Reveal key={caption} delay={i * 110}>
-                <div className="w-[68vw] max-w-[280px] shrink-0 snap-center sm:w-[300px]">
-                  <PhoneMockup src={src} alt={alt} caption={caption} />
-                </div>
-              </Reveal>
             ))}
           </div>
-          <p className="text-center text-xs text-muted-foreground sm:hidden">
-            arraste para o lado →
-          </p>
+
+          <div className="mt-12 -mx-6 px-6 sm:mx-0 sm:px-0 lg:mt-0">
+            <div className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:gap-10 lg:justify-center lg:gap-8 lg:overflow-visible lg:pb-0">
+              {insightsPrints.map(([src, alt, caption], i) => (
+                <Reveal key={caption} delay={i * 110}>
+                  <div className="w-[68vw] max-w-[280px] shrink-0 snap-center sm:w-[300px] lg:w-[240px]">
+                    <PhoneMockup src={src} alt={alt} caption={caption} />
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+            <p className="text-center text-xs text-muted-foreground sm:hidden">
+              arraste para o lado →
+            </p>
+          </div>
         </div>
+
 
 
       </div>
