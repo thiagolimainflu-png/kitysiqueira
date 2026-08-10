@@ -471,45 +471,6 @@ function Parceria() {
 
 
 
-const diferenciais: [string, string][] = [
-  ["🎯", "Conteúdo estratégico que vende"],
-  ["✨", "Produção estética de alto nível"],
-  ["❤️", "Conexão real com o público"],
-  ["💎", "Posicionamento de marca premium"],
-  ["📖", "Storytelling que gera desejo"],
-];
-
-function Diferenciais() {
-  return (
-    <section id="diferenciais" className="bg-cream px-5 py-16 sm:px-8">
-      <div className="mx-auto max-w-3xl">
-        <Reveal className="text-center">
-          <Eyebrow>Diferenciais</Eyebrow>
-          <h2 className="mt-6 font-display text-3xl leading-[1.15] sm:text-5xl">
-            O que marcas parceiras recebem.
-          </h2>
-          <p className="mt-4 text-sm text-muted-foreground">
-            Muito além de um post. Uma parceria estratégica.
-          </p>
-        </Reveal>
-
-        <ul className="mt-12 space-y-4">
-          {diferenciais.map(([icon, label], i) => (
-            <Reveal
-              as="li"
-              key={label}
-              delay={i * 80}
-              className="lift border border-border bg-card px-6 py-10 text-center"
-            >
-              <span className="emoji text-3xl">{icon}</span>
-              <p className="mt-5 text-sm font-medium">{label}</p>
-            </Reveal>
-          ))}
-        </ul>
-      </div>
-    </section>
-  );
-}
 
 const marcas = [
   "MODA",
@@ -635,8 +596,6 @@ function Home() {
         <Audiencia />
         <Conteudos />
         <Parceria />
-        
-        <Diferenciais />
         <Portfolio />
         <Contato />
       </main>
