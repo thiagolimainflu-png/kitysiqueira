@@ -10,7 +10,7 @@ import heroImg from "@/assets/hero-bianca.jpg";
 import heroThumb from "@/assets/hero-bianca-thumb.jpg";
 import sobreImg from "@/assets/sobre-bianca.jpg";
 import { PhoneMockup } from "@/components/PhoneMockup";
-import { InstagramPosts } from "@/components/InstagramPosts";
+
 import insightsGeral from "@/assets/insights-geral.jpg.asset.json";
 import insightsPublico from "@/assets/insights-publico.jpg.asset.json";
 import insightsStories from "@/assets/insights-stories.jpg.asset.json";
@@ -360,29 +360,6 @@ function Audiencia() {
   );
 }
 
-function Conteudos() {
-  return (
-    <section id="conteudos" className="bg-cream px-5 py-16 sm:px-8">
-      <div className="mx-auto max-w-5xl">
-        <Reveal className="text-center">
-          <Eyebrow>Conteúdos</Eyebrow>
-          <h2 className="mt-6 font-display text-3xl leading-[1.15] sm:text-5xl">
-            Destaques <em className="italic text-rose">recentes</em>
-          </h2>
-          <p className="mt-4 text-sm text-muted-foreground">
-            Publicações reais do perfil, com entrega orgânica e engajamento consistente.
-          </p>
-        </Reveal>
-
-        <Reveal delay={120}>
-          <div className="mt-12">
-            <InstagramPosts />
-          </div>
-        </Reveal>
-      </div>
-    </section>
-  );
-}
 
 
 
@@ -633,7 +610,7 @@ function Home() {
         <Sobre />
         <Numeros />
         <Audiencia />
-        <Conteudos />
+        
         <Parceria />
         
         <Diferenciais />
