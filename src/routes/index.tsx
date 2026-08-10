@@ -9,6 +9,11 @@ import { WhatsAppFab, WHATSAPP_URL } from "@/components/WhatsAppFab";
 import heroImg from "@/assets/hero-bianca.jpg";
 import heroThumb from "@/assets/hero-bianca-thumb.jpg";
 import sobreImg from "@/assets/sobre-bianca.jpg";
+import { PhoneMockup } from "@/components/PhoneMockup";
+import insightsGeral from "@/assets/insights-geral.jpg.asset.json";
+import insightsPublico from "@/assets/insights-publico.jpg.asset.json";
+import insightsStories from "@/assets/insights-stories.jpg.asset.json";
+
 
 const EMAIL = "contato.talitaacosta@gmail.com";
 const TELEFONE = "Publis e parcerias no direct";
