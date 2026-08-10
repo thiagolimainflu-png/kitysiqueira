@@ -676,7 +676,7 @@ function Home() {
         <Numeros />
         <Audiencia />
         <Parceria />
-        <Planos />
+        
         <Diferenciais />
         <Portfolio />
         <Contato />
