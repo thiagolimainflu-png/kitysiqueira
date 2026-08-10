@@ -271,12 +271,12 @@ function Numeros() {
 const barras: [string, number][] = [
   ["Feminino", 85],
   ["18-44 anos", 74],
-  ["Nordeste", 68],
+  ["Amazonas e Norte", 68],
 ];
 
 const audienciaCards: [string, string, string][] = [
   ["👩", "85%", "Público feminino"],
-  ["🙏", "Cristão", "Valores e estilo de vida"],
+  ["🏠", "Mães", "Rotina, casa e família"],
   ["🛍️", "18-44", "Faixa etária principal"],
   ["💬", "Alto", "Engajamento e confiança"],
 ];
