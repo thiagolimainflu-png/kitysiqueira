@@ -9,6 +9,11 @@ import { WhatsAppFab, WHATSAPP_URL } from "@/components/WhatsAppFab";
 import heroImg from "@/assets/hero-bianca.jpg";
 import heroThumb from "@/assets/hero-bianca-thumb.jpg";
 import sobreImg from "@/assets/sobre-bianca.jpg";
+import { PhoneMockup } from "@/components/PhoneMockup";
+import insightsGeral from "@/assets/insights-geral.jpg.asset.json";
+import insightsPublico from "@/assets/insights-publico.jpg.asset.json";
+import insightsStories from "@/assets/insights-stories.jpg.asset.json";
+
 
 const EMAIL = "contato.talitaacosta@gmail.com";
 const TELEFONE = "Publis e parcerias no direct";
@@ -274,12 +279,24 @@ const barras: [string, number][] = [
   ["Amazonas e Norte", 68],
 ];
 
-const audienciaCards: [string, string, string][] = [
-  ["👩", "85%", "Público feminino"],
-  ["🏠", "Mães", "Rotina, casa e família"],
-  ["🛍️", "18-44", "Faixa etária principal"],
-  ["💬", "Alto", "Engajamento e confiança"],
+const insightsPrints: [string, string, string][] = [
+  [
+    insightsGeral.url,
+    "Print do Instagram Insights com 2.022.728 visualizações em 30 dias",
+    "2 milhões de visualizações",
+  ],
+  [
+    insightsPublico.url,
+    "Print do Instagram Insights mostrando público 63,6% feminino",
+    "Perfil do público",
+  ],
+  [
+    insightsStories.url,
+    "Print de métricas de stories com 4.992 visualizações",
+    "Stories no dia a dia",
+  ],
 ];
+
 
 function Audiencia() {
   const { ref, seen } = useInView<HTMLDivElement>();
@@ -319,24 +336,14 @@ function Audiencia() {
           ))}
         </div>
 
-        <ul className="mt-10 space-y-4">
-          {audienciaCards.map(([icon, value, label], i) => (
-            <Reveal
-              as="li"
-              key={label}
-              delay={i * 90}
-              className="lift flex items-center gap-5 bg-card px-6 py-6 shadow-[0_10px_30px_-26px_rgba(0,0,0,0.55)]"
-            >
-              <span className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-accent/35 text-2xl emoji">
-                {icon}
-              </span>
-              <div className="min-w-0">
-                <p className="font-display text-2xl">{value}</p>
-                <p className="mt-1 text-sm text-muted-foreground">{label}</p>
-              </div>
+        <div className="mt-12 grid gap-10 sm:grid-cols-3">
+          {insightsPrints.map(([src, alt, caption], i) => (
+            <Reveal key={caption} delay={i * 110}>
+              <PhoneMockup src={src} alt={alt} caption={caption} />
             </Reveal>
           ))}
-        </ul>
+        </div>
+
       </div>
     </section>
   );
