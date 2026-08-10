@@ -555,20 +555,20 @@ function Contato() {
 function Footer() {
   return (
     <footer className="bg-[#0d0b0b] px-5 py-14 text-center sm:px-8">
-      <p className="font-display text-2xl text-dark-muted">Bianca Pires</p>
+      <p className="font-display text-2xl text-dark-muted">Talita Costa</p>
       <p className="mt-6 text-xs text-dark-muted/70">
-        © 2026 Bianca Pires · Todos os direitos reservados
+        © 2026 Talita Costa · Todos os direitos reservados
       </p>
       <div className="mt-6 flex justify-center gap-8 text-[0.62rem] tracking-[0.22em] text-dark-muted/70 uppercase [&_a]:transition-colors [&_a:hover]:text-dark-foreground">
         <a
-          href="https://instagram.com/bianncapires"
+          href="https://instagram.com/eu.talitaacosta"
           target="_blank"
           rel="noopener noreferrer"
         >
           Instagram
         </a>
         <a
-          href="https://instagram.com/bianncapires"
+          href="https://instagram.com/eu.talitaacosta"
           target="_blank"
           rel="noopener noreferrer"
         >
