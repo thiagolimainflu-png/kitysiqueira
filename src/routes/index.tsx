@@ -11,9 +11,9 @@ import heroThumb from "@/assets/hero-bianca-thumb.jpg";
 import sobreImg from "@/assets/sobre-bianca.jpg";
 import { PhoneMockup } from "@/components/PhoneMockup";
 import { InstagramPosts } from "@/components/InstagramPosts";
-import insightsGeral from "@/assets/insights-geral.jpg.asset.json";
-import insightsPublico from "@/assets/insights-publico.jpg.asset.json";
-import insightsStories from "@/assets/insights-stories.jpg.asset.json";
+import insightsGeral from "@/assets/insights-geral.jpg";
+import insightsPublico from "@/assets/insights-publico.jpg";
+import insightsStories from "@/assets/insights-stories.jpg";
 
 
 const EMAIL = "contato.talitaacosta@gmail.com";
@@ -284,17 +284,17 @@ const barras: [string, number][] = [
 
 const insightsPrints: [string, string, string][] = [
   [
-    insightsGeral.url,
+    insightsGeral,
     "Print do Instagram Insights com 2.022.728 visualizações em 30 dias",
     "2 milhões de visualizações",
   ],
   [
-    insightsPublico.url,
+    insightsPublico,
     "Print do Instagram Insights mostrando público 63,6% feminino",
     "Perfil do público",
   ],
   [
-    insightsStories.url,
+    insightsStories,
     "Print de métricas de stories com 4.992 visualizações",
     "Stories no dia a dia",
   ],

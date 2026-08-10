@@ -1,17 +1,17 @@
-import p1 from "@/assets/post-Dbqg6dFxS2j.jpg.asset.json";
-import p2 from "@/assets/post-DbonYkexNmW.jpg.asset.json";
-import p3 from "@/assets/post-DbYz2cSx7Hz.jpg.asset.json";
-import p4 from "@/assets/post-DbW0JASxYI4.jpg.asset.json";
-import p5 from "@/assets/post-DbMSwFUquac.jpg.asset.json";
-import p6 from "@/assets/post-DbD0D4JxdL_.jpg.asset.json";
+import p1 from "@/assets/post-Dbqg6dFxS2j.jpg";
+import p2 from "@/assets/post-DbonYkexNmW.jpg";
+import p3 from "@/assets/post-DbYz2cSx7Hz.jpg";
+import p4 from "@/assets/post-DbW0JASxYI4.jpg";
+import p5 from "@/assets/post-DbMSwFUquac.jpg";
+import p6 from "@/assets/post-DbD0D4JxdL_.jpg";
 
 const POSTS = [
-  { src: p1.url, href: "https://www.instagram.com/p/Dbqg6dFxS2j/" },
-  { src: p2.url, href: "https://www.instagram.com/p/DbonYkexNmW/" },
-  { src: p3.url, href: "https://www.instagram.com/p/DbYz2cSx7Hz/" },
-  { src: p4.url, href: "https://www.instagram.com/p/DbW0JASxYI4/" },
-  { src: p5.url, href: "https://www.instagram.com/p/DbMSwFUquac/" },
-  { src: p6.url, href: "https://www.instagram.com/p/DbD0D4JxdL_/" },
+  { src: p1, href: "https://www.instagram.com/p/Dbqg6dFxS2j/" },
+  { src: p2, href: "https://www.instagram.com/p/DbonYkexNmW/" },
+  { src: p3, href: "https://www.instagram.com/p/DbYz2cSx7Hz/" },
+  { src: p4, href: "https://www.instagram.com/p/DbW0JASxYI4/" },
+  { src: p5, href: "https://www.instagram.com/p/DbMSwFUquac/" },
+  { src: p6, href: "https://www.instagram.com/p/DbD0D4JxdL_/" },
 ];
 
 export function InstagramPosts() {
