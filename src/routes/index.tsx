@@ -16,7 +16,7 @@ import insightsStories from "@/assets/insights-stories.jpg.asset.json";
 
 
 const EMAIL = "contato.talitaacosta@gmail.com";
-const TELEFONE = "Publis e parcerias no direct";
+const TELEFONE = "(92) 99588-9599 · publis e parcerias";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -164,7 +164,7 @@ function Hero() {
 }
 
 function Sobre() {
-  const tags = ["Marketing", "Lifestyle", "Maternidade", "Vida real", "Publis"];
+  const tags = ["Life Style", "Moda", "Beleza", "Maternidade"];
   return (
     <section id="sobre" className="bg-cream px-5 py-16 sm:px-8">
       <div className="mx-auto max-w-3xl">
@@ -190,19 +190,21 @@ function Sobre() {
           </h2>
           <div className="mt-7 space-y-5 text-sm leading-loose text-muted-foreground sm:text-base">
             <p>
-              Talita Costa é criadora de conteúdo digital em Pres. Figueiredo
-              (AM). Crio conteúdo estratégico e autêntico que gera resultado
-              para as marcas parceiras.
+              Talita Costa, 29 anos, casada, mãe de 3 filhos, é profissional de
+              educação física e modelo. Compartilha nas redes o dia a dia de
+              mãe, com muita leveza e bom humor, além de dicas de moda, beleza e
+              vida saudável.
             </p>
             <p>
-              No perfil @eu.talitaacosta, falo de marketing e vida real, divido
-              a rotina de mãe de 3 (e mãe de pet) e mostro o dia a dia com
-              leveza e identificação.
+              Começou nas mídias sociais em 2018, quando foi eleita Miss
+              Amazonas. No ano seguinte, em 2019, recebeu mais um título: Miss
+              Beleza do Amazonas.
             </p>
             <p>
-              É essa confiança que faz as publis funcionarem: quando indico algo,
-              a comunidade escuta, comenta e vai atrás. Publis e parcerias pelo
-              direct.
+              Depois da carreira como Miss, casou-se e passou a falar sobre
+              maternidade no perfil. Hoje o conteúdo é focado em produções
+              estratégicas para empresas — leves, criativas e divertidas, em
+              nichos como moda e beleza.
             </p>
           </div>
 
@@ -224,9 +226,9 @@ function Sobre() {
 
 const numeros: [string, string, string][] = [
   ["Instagram", "16,9 mil", "Seguidores"],
-  ["Instagram", "1.650", "Publicações"],
-  ["Instagram · Reels", "Alto", "Alcance orgânico"],
-  ["Instagram · Stories", "Diário", "Presença nos stories"],
+  ["Instagram · Stories", "2 mil a 12 mil", "Views diários"],
+  ["Instagram · Feed", "3 mil a 7,7 mil", "Alcance médio por post"],
+  ["Instagram · Reels", "10 mil a 30 mil", "Média de reproduções"],
 ];
 
 
