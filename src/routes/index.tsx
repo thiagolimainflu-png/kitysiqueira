@@ -442,6 +442,76 @@ function Parceria() {
   );
 }
 
+const planos: { grupo: string; itens: [string, string][] }[] = [
+  {
+    grupo: "Instagram · Stories",
+    itens: [
+      ["Unitário", "R$ 150"],
+      ["Rodada de 4 stories", "R$ 500"],
+    ],
+  },
+  {
+    grupo: "Post no feed",
+    itens: [
+      ["Foto (inclui colaboração)", "R$ 200"],
+      ["Reels (inclui colaboração)", "R$ 375"],
+      ["Foto + 3 stories (inclui colaboração)", "R$ 500"],
+      ["Reels + 3 stories (inclui colaboração)", "R$ 650"],
+    ],
+  },
+  {
+    grupo: "Planos mensais",
+    itens: [
+      ["Carrossel + stories", "R$ 400"],
+      ["1 reels + stories", "R$ 470"],
+      ["2 reels + stories", "R$ 600"],
+      ["3 reels + stories", "R$ 900"],
+    ],
+  },
+];
+
+function Planos() {
+  return (
+    <section id="planos" className="bg-cream px-5 py-20 sm:px-8">
+      <div className="mx-auto max-w-5xl">
+        <Reveal className="text-center">
+          <Eyebrow>Investimento</Eyebrow>
+          <h2 className="mt-6 font-display text-3xl leading-[1.15] sm:text-5xl">
+            Planos de <em className="italic text-rose">divulgação</em>
+          </h2>
+        </Reveal>
+
+        <div className="mt-12 grid gap-8 sm:grid-cols-3">
+          {planos.map((p, i) => (
+            <Reveal key={p.grupo} delay={i * 90}>
+              <h3 className="text-center text-[0.62rem] font-semibold tracking-[0.2em] text-muted-foreground uppercase">
+                {p.grupo}
+              </h3>
+              <ul className="mt-6 space-y-3">
+                {p.itens.map(([nome, preco]) => (
+                  <li
+                    key={nome}
+                    className="lift border border-border bg-card px-5 py-5 text-center"
+                  >
+                    <p className="text-[0.68rem] tracking-[0.14em] text-muted-foreground uppercase">
+                      {nome}
+                    </p>
+                    <p className="mt-3 font-display text-2xl">{preco}</p>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+          ))}
+        </div>
+
+        <p className="mt-10 text-center text-xs text-muted-foreground">
+          Combos e campanhas personalizadas sob consulta.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 
 const diferenciais: [string, string][] = [
   ["🎯", "Conteúdo estratégico que vende"],
