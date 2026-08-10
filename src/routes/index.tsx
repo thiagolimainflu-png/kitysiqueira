@@ -17,7 +17,7 @@ import insightsStories from "@/assets/insights-stories.jpg";
 
 
 const EMAIL = "contato.talitaacosta@gmail.com";
-const TELEFONE = "(92) 99588-9599 · publis e parcerias";
+const TELEFONE = "(84) 9109-2827 · publis e parcerias";
 
 export const Route = createFileRoute("/")({
   head: () => ({

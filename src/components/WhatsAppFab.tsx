@@ -1,5 +1,5 @@
 export const WHATSAPP_URL =
-  "https://wa.me/c/559288564664";
+  "https://wa.me/5584991092827";
 
 export function WhatsAppFab() {
   return (
