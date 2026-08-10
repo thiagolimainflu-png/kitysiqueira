@@ -10,26 +10,26 @@ import heroImg from "@/assets/hero-bianca.jpg";
 import heroThumb from "@/assets/hero-bianca-thumb.jpg";
 import sobreImg from "@/assets/sobre-bianca.jpg";
 
-const EMAIL = "contato.bianncapires@gmail.com";
+const EMAIL = "contato.talitaacosta@gmail.com";
 const TELEFONE = "Publis e parcerias no direct";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Bianca Pires | Criadora de Conteúdo Digital" },
+      { title: "Talita Costa | Criadora de Conteúdo Digital" },
       {
         name: "description",
         content:
-          "Bianca Pires (@bianncapires): mais de 9 mil seguidores no Instagram com conteúdo de fé, rotina e humor. Publis e parcerias que geram conexão real.",
+          "Talita Costa (@eu.talitaacosta): 16,9 mil seguidores no Instagram com conteúdo estratégico, marketing e vida real. Publis e parcerias que geram resultado.",
       },
       {
         property: "og:title",
-        content: "Bianca Pires | Criadora de Conteúdo Digital",
+        content: "Talita Costa | Criadora de Conteúdo Digital",
       },
       {
         property: "og:description",
         content:
-          "Cristã, rotina e humor. 231 publicações e uma comunidade engajada de 9.132 seguidores. Parcerias com marcas que querem proximidade e confiança.",
+          "Marketing e vida real. 1.650 publicações e uma comunidade de 16,9 mil seguidores em Pres. Figueiredo (AM). Parcerias com marcas que querem autenticidade.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
