@@ -218,8 +218,8 @@ function Sobre() {
 }
 
 const numeros: [string, string, string][] = [
-  ["Instagram", "9.132", "Seguidores"],
-  ["Instagram", "231", "Publicações"],
+  ["Instagram", "16,9 mil", "Seguidores"],
+  ["Instagram", "1.650", "Publicações"],
   ["Instagram · Reels", "Alto", "Alcance orgânico"],
   ["Instagram · Stories", "Diário", "Presença nos stories"],
 ];
