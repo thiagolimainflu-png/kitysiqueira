@@ -1,17 +1,17 @@
-import p1 from "@/assets/post-Dbqg6dFxS2j.jpg";
-import p2 from "@/assets/post-DbonYkexNmW.jpg";
-import p3 from "@/assets/post-DbYz2cSx7Hz.jpg";
-import p4 from "@/assets/post-DbW0JASxYI4.jpg";
-import p5 from "@/assets/post-DbMSwFUquac.jpg";
-import p6 from "@/assets/post-DbD0D4JxdL_.jpg";
+import p1 from "@/assets/post-katy-1.jpg";
+import p2 from "@/assets/post-katy-2.jpg";
+import p3 from "@/assets/post-katy-3.jpg";
+import p4 from "@/assets/post-katy-4.jpg";
+import p5 from "@/assets/post-katy-5.jpg";
+import p6 from "@/assets/post-katy-6.jpg";
 
 const POSTS = [
-  { src: p1, href: "https://www.instagram.com/p/Dbqg6dFxS2j/" },
-  { src: p2, href: "https://www.instagram.com/p/DbonYkexNmW/" },
-  { src: p3, href: "https://www.instagram.com/p/DbYz2cSx7Hz/" },
-  { src: p4, href: "https://www.instagram.com/p/DbW0JASxYI4/" },
-  { src: p5, href: "https://www.instagram.com/p/DbMSwFUquac/" },
-  { src: p6, href: "https://www.instagram.com/p/DbD0D4JxdL_/" },
+  { src: p1, href: "https://www.instagram.com/katysiqueiraa/p/DUEY4yblIRj/" },
+  { src: p2, href: "https://www.instagram.com/katysiqueiraa/p/DP8zAFPDmUX/" },
+  { src: p3, href: "https://www.instagram.com/katysiqueiraa/reel/DDDDXr5SP2c/" },
+  { src: p4, href: "https://www.instagram.com/katysiqueiraa/reel/Db3ZIYZzD6B/" },
+  { src: p5, href: "https://www.instagram.com/katysiqueiraa/reel/Db23QQnz7eI/" },
+  { src: p6, href: "https://www.instagram.com/katysiqueiraa/p/Db1v3_hlA1S/" },
 ];
 
 export function InstagramPosts() {
@@ -28,7 +28,7 @@ export function InstagramPosts() {
           >
             <img
               src={post.src}
-              alt={`Publicação ${i + 1} de Talita Costa no Instagram`}
+              alt={`Publicação ${i + 1} de Katy (@katysiqueiraa) no Instagram`}
               loading="lazy"
               className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
             />
@@ -42,7 +42,7 @@ export function InstagramPosts() {
 
       <div className="mt-8 text-center">
         <a
-          href="https://www.instagram.com/eu.talitaacosta/"
+          href="https://www.instagram.com/katysiqueiraa/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-sm text-rose underline-offset-4 hover:underline"

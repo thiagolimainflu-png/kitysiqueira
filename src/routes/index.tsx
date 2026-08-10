@@ -6,9 +6,9 @@ import { Reveal } from "@/components/Reveal";
 import { SmoothImage } from "@/components/SmoothImage";
 import { SiteHeader } from "@/components/SiteHeader";
 import { WhatsAppFab, WHATSAPP_URL } from "@/components/WhatsAppFab";
-import heroImg from "@/assets/hero-bianca.jpg";
-import heroThumb from "@/assets/hero-bianca-thumb.jpg";
-import sobreImg from "@/assets/sobre-bianca.jpg";
+import heroImg from "@/assets/hero-katy.jpg";
+import heroThumb from "@/assets/hero-katy-thumb.jpg";
+import sobreImg from "@/assets/sobre-katy.jpg";
 import { PhoneMockup } from "@/components/PhoneMockup";
 import { InstagramPosts } from "@/components/InstagramPosts";
 import insightsGeral from "@/assets/insights-geral.jpg";
@@ -22,20 +22,20 @@ const TELEFONE = "(92) 99588-9599 · publis e parcerias";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Talita Costa | Criadora de Conteúdo Digital" },
+      { title: "Katy (@katysiqueiraa) | Criadora de Conteúdo Digital" },
       {
         name: "description",
         content:
-          "Talita Costa (@eu.talitaacosta): 16,9 mil seguidores no Instagram com conteúdo estratégico, marketing e vida real. Publis e parcerias que geram resultado.",
+          "Katy (@katysiqueiraa): 70 mil seguidores no Instagram, 649 publicações e embaixadora @sheinofficial. Publis e parcerias com conteúdo autêntico.",
       },
       {
         property: "og:title",
-        content: "Talita Costa | Criadora de Conteúdo Digital",
+        content: "Katy (@katysiqueiraa) | Criadora de Conteúdo Digital",
       },
       {
         property: "og:description",
         content:
-          "Marketing e vida real. 1.650 publicações e uma comunidade de 16,9 mil seguidores em Pres. Figueiredo (AM). Parcerias com marcas que querem autenticidade.",
+          "Bom dia, lindriiinhas! Criadora de conteúdo digital com 70 mil seguidores e 649 publicações no Instagram. Embaixadora @sheinofficial.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -102,7 +102,7 @@ function Hero() {
           <div className="img-frame relative">
             <SmoothImage
               src={heroImg}
-              alt="Talita Costa em blazer preto, retrato em estúdio com luz difusa"
+              alt="Katy (@katysiqueiraa), criadora de conteúdo digital"
               priority
               placeholder={heroThumb}
               objectPosition="object-top"
@@ -112,7 +112,7 @@ function Hero() {
             <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-dark to-transparent lg:hidden" />
           </div>
           <div className="float-soft relative -mt-16 ml-0 w-fit bg-rose-soft px-7 py-4 text-ink shadow-[0_18px_40px_-24px_rgba(0,0,0,0.7)] lg:absolute lg:bottom-10 lg:-left-10 lg:mt-0">
-            <p className="font-display text-2xl leading-none">16,9K</p>
+            <p className="font-display text-2xl leading-none">70K</p>
             <p className="mt-1 text-[0.65rem] tracking-[0.18em] uppercase">
               Seguidores
             </p>
@@ -120,17 +120,17 @@ function Hero() {
         </div>
 
         <div className="relative px-5 pb-16 pt-12 text-center sm:px-8 lg:order-1 lg:px-0 lg:py-0 lg:text-left">
-          <span className="watermark">Talita</span>
+          <span className="watermark">Katy</span>
           <div className="relative mx-auto max-w-3xl lg:mx-0">
-            <Reveal delay={60}><Eyebrow>Criadora de conteúdo digital · Marketing &amp; vida real</Eyebrow></Reveal>
+            <Reveal delay={60}><Eyebrow>Criadora de conteúdo digital · Embaixadora @sheinofficial</Eyebrow></Reveal>
             <Reveal delay={160}><h1 className="mt-6 font-display text-4xl leading-[1.12] sm:text-6xl lg:text-[4.25rem]">
-              Conteúdo estratégico e autêntico que{" "}
-              <em className="italic text-rose-soft">gera resultado.</em>
+              Bom dia, lindriiinhas! Conteúdo que{" "}
+              <em className="italic text-rose-soft">conecta de verdade.</em>
             </h1></Reveal>
             <Reveal delay={260}><p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-dark-muted sm:text-base lg:mx-0 lg:max-w-lg">
-              Oii, Mermãs! Sou Talita Costa, de Pres. Figueiredo (AM). Crio
-              conteúdo real, com uma comunidade que acompanha de perto e confia no
-              que eu indico.
+              Sou a Katy, criadora de conteúdo digital. Aqui é @katysiqueiraa:
+              uma comunidade de 70 mil seguidores que acompanha o dia a dia e
+              confia no que eu indico.
             </p></Reveal>
 
 
@@ -148,9 +148,9 @@ function Hero() {
 
             <Reveal as="dl" delay={440} className="mt-14 grid grid-cols-3 gap-2 lg:max-w-xl lg:gap-6">
               {[
-                ["16,9 mil", "Seguidores"],
-                ["1.650", "Publicações"],
-                ["6.001", "Seguindo"],
+                ["70 mil", "Seguidores"],
+                ["649", "Publicações"],
+                ["Shein", "Embaixadora"],
               ].map(([n, l]) => (
 
                 <div key={l}>
@@ -178,14 +178,14 @@ function Sobre() {
           <Reveal variant="scale" className="img-frame">
             <SmoothImage
               src={sobreImg}
-              alt="Talita Costa, criadora de conteúdo digital"
+              alt="Katy (@katysiqueiraa), criadora de conteúdo digital"
               ratio="1 / 1"
               className="w-full object-cover"
             />
           </Reveal>
           <Reveal as="figure" delay={120} className="bg-card px-6 py-7 shadow-[0_10px_30px_-24px_rgba(0,0,0,0.5)]">
             <blockquote className="font-display text-base italic">
-              &ldquo;Oii, Mermãs! Fica aqui comigo.&rdquo;
+              &ldquo;BOM DIA LINDRIIINHAS 😍&rdquo;
             </blockquote>
           </Reveal>
         </div>
@@ -199,21 +199,18 @@ function Sobre() {
           </h2>
           <div className="mt-7 space-y-5 text-sm leading-loose text-muted-foreground sm:text-base">
             <p>
-              Talita Costa, 29 anos, casada, mãe de 3 filhos, é profissional de
-              educação física e modelo. Compartilha nas redes o dia a dia de
-              mãe, com muita leveza e bom humor, além de dicas de moda, beleza e
-              vida saudável.
+              Katy, criadora de conteúdo digital. No perfil @katysiqueiraa o
+              bom humor é marca registrada: &ldquo;Tá pensando que eu sou
+              cachorra é Fábio?&rdquo; 🐶
             </p>
             <p>
-              Começou nas mídias sociais em 2018, quando foi eleita Miss
-              Amazonas. No ano seguinte, em 2019, recebeu mais um título: Miss
-              Beleza do Amazonas.
+              Embaixadora da @sheinofficial, faz divulgações e parcerias com
+              marcas ao longo da rotina, sempre com o jeitinho que a comunidade
+              já conhece.
             </p>
             <p>
-              Depois da carreira como Miss, casou-se e passou a falar sobre
-              maternidade no perfil. Hoje o conteúdo é focado em produções
-              estratégicas para empresas — leves, criativas e divertidas, em
-              nichos como moda e beleza.
+              São 649 publicações e stories diários 🚀 para 70 mil seguidores
+              que acompanham de perto.
             </p>
           </div>
 
@@ -234,10 +231,10 @@ function Sobre() {
 }
 
 const numeros: [string, string, string][] = [
-  ["Instagram", "16,9 mil", "Seguidores"],
-  ["Instagram · Stories", "2 mil a 12 mil", "Views diários"],
-  ["Instagram · Feed", "3 mil a 7,7 mil", "Alcance médio por post"],
-  ["Instagram · Reels", "10 mil a 30 mil", "Média de reproduções"],
+  ["Instagram", "70 mil", "Seguidores"],
+  ["Instagram", "649", "Publicações"],
+  ["Instagram · Stories", "Diários", "Conteúdo no dia a dia 🚀"],
+  ["Parcerias", "Shein", "Embaixadora oficial"],
 ];
 
 
@@ -573,24 +570,24 @@ function Contato() {
 function Footer() {
   return (
     <footer className="bg-[#0d0b0b] px-5 py-14 text-center sm:px-8">
-      <p className="font-display text-2xl text-dark-muted">Talita Costa</p>
+      <p className="font-display text-2xl text-dark-muted">katysiqueiraa</p>
       <p className="mt-6 text-xs text-dark-muted/70">
-        © 2026 Talita Costa · Todos os direitos reservados
+        © 2026 katysiqueiraa · Todos os direitos reservados
       </p>
       <div className="mt-6 flex justify-center gap-8 text-[0.62rem] tracking-[0.22em] text-dark-muted/70 uppercase [&_a]:transition-colors [&_a:hover]:text-dark-foreground">
         <a
-          href="https://instagram.com/eu.talitaacosta"
+          href="https://www.instagram.com/katysiqueiraa/"
           target="_blank"
           rel="noopener noreferrer"
         >
           Instagram
         </a>
         <a
-          href="https://instagram.com/eu.talitaacosta"
+          href="https://www.threads.com/@katysiqueiraa?xmt=AQG09iLIRBsPvdFzy1IlK3v67H5H2agCk2GTQlmdPeYZs2M"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Direct
+          Threads
         </a>
       </div>
     </footer>

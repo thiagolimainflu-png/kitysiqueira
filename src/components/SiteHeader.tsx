@@ -36,7 +36,7 @@ export function SiteHeader() {
             solid || open ? "text-ink" : "text-dark-foreground"
           }`}
         >
-          Talita Costa
+          katysiqueiraa
         </a>
         <button
           type="button"
