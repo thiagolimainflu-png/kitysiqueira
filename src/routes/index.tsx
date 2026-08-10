@@ -274,12 +274,24 @@ const barras: [string, number][] = [
   ["Amazonas e Norte", 68],
 ];
 
-const audienciaCards: [string, string, string][] = [
-  ["👩", "85%", "Público feminino"],
-  ["🏠", "Mães", "Rotina, casa e família"],
-  ["🛍️", "18-44", "Faixa etária principal"],
-  ["💬", "Alto", "Engajamento e confiança"],
+const insightsPrints: [string, string, string][] = [
+  [
+    insightsGeral.url,
+    "Print do Instagram Insights com 2.022.728 visualizações em 30 dias",
+    "2 milhões de visualizações",
+  ],
+  [
+    insightsPublico.url,
+    "Print do Instagram Insights mostrando público 63,6% feminino",
+    "Perfil do público",
+  ],
+  [
+    insightsStories.url,
+    "Print de métricas de stories com 4.992 visualizações",
+    "Stories no dia a dia",
+  ],
 ];
+
 
 function Audiencia() {
   const { ref, seen } = useInView<HTMLDivElement>();
