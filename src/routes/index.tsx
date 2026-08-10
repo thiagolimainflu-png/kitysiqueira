@@ -85,7 +85,7 @@ function CtaWhats({
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className={`btn-sheen block w-full px-6 py-4 text-center text-xs font-semibold tracking-[0.2em] uppercase ${className}`}
+      className={`btn-sheen block w-full px-6 py-4 text-center text-xs font-semibold tracking-[0.2em] uppercase lg:whitespace-nowrap lg:px-8 ${className}`}
     >
       {children}
     </a>
@@ -97,93 +97,101 @@ function CtaWhats({
 function Hero() {
   return (
     <section id="top" className="band-dark relative overflow-hidden">
-      <div className="img-frame relative">
-        <SmoothImage
-          src={heroImg}
-          alt="Talita Costa em blazer preto, retrato em estúdio com luz difusa"
-          priority
-          placeholder={heroThumb}
-          objectPosition="object-top"
-          wrapperClassName="h-[62vh] min-h-[380px] w-full"
-          className="h-[62vh] min-h-[380px] w-full object-cover object-top"
-        />
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-dark to-transparent" />
-      </div>
-      <div className="float-soft relative -mt-16 ml-0 w-fit bg-rose-soft px-7 py-4 text-ink shadow-[0_18px_40px_-24px_rgba(0,0,0,0.7)]">
-        <p className="font-display text-2xl leading-none">16,9K</p>
-        <p className="mt-1 text-[0.65rem] tracking-[0.18em] uppercase">
-          Seguidores
-        </p>
-      </div>
+      <div className="mx-auto lg:grid lg:min-h-[86vh] lg:max-w-7xl lg:grid-cols-[1fr_1.05fr] lg:items-center lg:gap-16 lg:px-10 lg:py-20">
+        <div className="relative lg:order-2">
+          <div className="img-frame relative">
+            <SmoothImage
+              src={heroImg}
+              alt="Talita Costa em blazer preto, retrato em estúdio com luz difusa"
+              priority
+              placeholder={heroThumb}
+              objectPosition="object-top"
+              wrapperClassName="h-[62vh] min-h-[380px] w-full lg:h-[74vh]"
+              className="h-[62vh] min-h-[380px] w-full object-cover object-top lg:h-[74vh]"
+            />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-dark to-transparent lg:hidden" />
+          </div>
+          <div className="float-soft relative -mt-16 ml-0 w-fit bg-rose-soft px-7 py-4 text-ink shadow-[0_18px_40px_-24px_rgba(0,0,0,0.7)] lg:absolute lg:bottom-10 lg:-left-10 lg:mt-0">
+            <p className="font-display text-2xl leading-none">16,9K</p>
+            <p className="mt-1 text-[0.65rem] tracking-[0.18em] uppercase">
+              Seguidores
+            </p>
+          </div>
+        </div>
 
-      <div className="relative px-5 pb-16 pt-12 text-center sm:px-8">
-        <span className="watermark">Talita</span>
-        <div className="relative mx-auto max-w-3xl">
-          <Reveal delay={60}><Eyebrow>Criadora de conteúdo digital · Marketing &amp; vida real</Eyebrow></Reveal>
-          <Reveal delay={160}><h1 className="mt-6 font-display text-4xl leading-[1.12] sm:text-6xl">
-            Conteúdo estratégico e autêntico que{" "}
-            <em className="italic text-rose-soft">gera resultado.</em>
-          </h1></Reveal>
-          <Reveal delay={260}><p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-dark-muted sm:text-base">
-            Oii, Mermãs! Sou Talita Costa, de Pres. Figueiredo (AM). Crio
-            conteúdo real, com uma comunidade que acompanha de perto e confia no
-            que eu indico.
-          </p></Reveal>
+        <div className="relative px-5 pb-16 pt-12 text-center sm:px-8 lg:order-1 lg:px-0 lg:py-0 lg:text-left">
+          <span className="watermark">Talita</span>
+          <div className="relative mx-auto max-w-3xl lg:mx-0">
+            <Reveal delay={60}><Eyebrow>Criadora de conteúdo digital · Marketing &amp; vida real</Eyebrow></Reveal>
+            <Reveal delay={160}><h1 className="mt-6 font-display text-4xl leading-[1.12] sm:text-6xl lg:text-[4.25rem]">
+              Conteúdo estratégico e autêntico que{" "}
+              <em className="italic text-rose-soft">gera resultado.</em>
+            </h1></Reveal>
+            <Reveal delay={260}><p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-dark-muted sm:text-base lg:mx-0 lg:max-w-lg">
+              Oii, Mermãs! Sou Talita Costa, de Pres. Figueiredo (AM). Crio
+              conteúdo real, com uma comunidade que acompanha de perto e confia no
+              que eu indico.
+            </p></Reveal>
 
 
-          <Reveal delay={340} className="mx-auto mt-10 flex max-w-sm flex-col gap-3">
-            <CtaWhats className="bg-rose text-white">
-              Quero anunciar com você
-            </CtaWhats>
-            <a
-              href="#numeros"
-              className="btn-sheen block w-full border border-white/35 px-6 py-4 text-center text-xs font-semibold tracking-[0.2em] uppercase"
-            >
-              Ver resultados
-            </a>
-          </Reveal>
+            <Reveal delay={340} className="mx-auto mt-10 flex max-w-sm flex-col gap-3 lg:mx-0 lg:max-w-2xl lg:flex-row">
+              <CtaWhats className="bg-rose text-white">
+                Quero anunciar com você
+              </CtaWhats>
+              <a
+                href="#numeros"
+                className="btn-sheen block w-full border border-white/35 px-6 py-4 text-center text-xs font-semibold tracking-[0.2em] uppercase lg:whitespace-nowrap lg:px-8"
+              >
+                Ver resultados
+              </a>
+            </Reveal>
 
-          <Reveal as="dl" delay={440} className="mt-14 grid grid-cols-3 gap-2">
-            {[
-              ["16,9 mil", "Seguidores"],
-              ["1.650", "Publicações"],
-              ["6.001", "Seguindo"],
-            ].map(([n, l]) => (
+            <Reveal as="dl" delay={440} className="mt-14 grid grid-cols-3 gap-2 lg:max-w-xl lg:gap-6">
+              {[
+                ["16,9 mil", "Seguidores"],
+                ["1.650", "Publicações"],
+                ["6.001", "Seguindo"],
+              ].map(([n, l]) => (
 
-              <div key={l}>
-                <dt className="font-display text-2xl sm:text-3xl">{n}</dt>
-                <dd className="mt-2 text-[0.6rem] tracking-[0.18em] text-dark-muted uppercase">
-                  {l}
-                </dd>
-              </div>
-            ))}
-          </Reveal>
+                <div key={l}>
+                  <dt className="font-display text-2xl sm:text-3xl">{n}</dt>
+                  <dd className="mt-2 text-[0.6rem] tracking-[0.18em] text-dark-muted uppercase">
+                    {l}
+                  </dd>
+                </div>
+              ))}
+            </Reveal>
+          </div>
         </div>
       </div>
     </section>
   );
 }
 
+
 function Sobre() {
   const tags = ["Life Style", "Moda", "Beleza", "Maternidade"];
   return (
-    <section id="sobre" className="bg-cream px-5 py-16 sm:px-8">
-      <div className="mx-auto max-w-3xl">
-        <Reveal variant="scale" className="img-frame">
-          <SmoothImage
-            src={sobreImg}
-            alt="Talita Costa, criadora de conteúdo digital"
-            ratio="1 / 1"
-            className="w-full object-cover"
-          />
-        </Reveal>
-        <Reveal as="figure" delay={120} className="bg-card px-6 py-7 shadow-[0_10px_30px_-24px_rgba(0,0,0,0.5)]">
-          <blockquote className="font-display text-base italic">
-            &ldquo;Oii, Mermãs! Fica aqui comigo.&rdquo;
-          </blockquote>
-        </Reveal>
+    <section id="sobre" className="bg-cream px-5 py-16 sm:px-8 lg:py-28">
+      <div className="mx-auto max-w-3xl lg:grid lg:max-w-6xl lg:grid-cols-2 lg:items-start lg:gap-16">
+        <div className="lg:sticky lg:top-28">
+          <Reveal variant="scale" className="img-frame">
+            <SmoothImage
+              src={sobreImg}
+              alt="Talita Costa, criadora de conteúdo digital"
+              ratio="1 / 1"
+              className="w-full object-cover"
+            />
+          </Reveal>
+          <Reveal as="figure" delay={120} className="bg-card px-6 py-7 shadow-[0_10px_30px_-24px_rgba(0,0,0,0.5)]">
+            <blockquote className="font-display text-base italic">
+              &ldquo;Oii, Mermãs! Fica aqui comigo.&rdquo;
+            </blockquote>
+          </Reveal>
+        </div>
 
-        <Reveal className="mt-14">
+        <Reveal className="mt-14 lg:mt-0">
+
           <Eyebrow>Quem sou</Eyebrow>
           <h2 className="mt-6 font-display text-3xl leading-[1.15] sm:text-5xl">
             Mais do que uma criadora.{" "}
@@ -235,8 +243,8 @@ const numeros: [string, string, string][] = [
 
 function Numeros() {
   return (
-    <section id="numeros" className="band-dark px-5 py-16 sm:px-8">
-      <div className="mx-auto max-w-3xl">
+    <section id="numeros" className="band-dark px-5 py-16 sm:px-8 lg:py-28">
+      <div className="mx-auto max-w-3xl lg:max-w-6xl">
         <Reveal className="text-center">
           <Eyebrow>Prova social</Eyebrow>
           <h2 className="mt-6 font-display text-3xl leading-[1.15] sm:text-5xl">
@@ -249,23 +257,24 @@ function Numeros() {
           </p>
         </Reveal>
 
-        <div className="mt-12 border border-white/10">
+        <div className="mt-12 grid border-t border-l border-white/10 sm:grid-cols-2 lg:grid-cols-4">
           {numeros.map(([rede, valor, label], i) => (
             <Reveal
               key={valor + label}
               delay={i * 90}
-              className={`px-6 py-10 text-center ${i > 0 ? "border-t border-white/10" : ""}`}
+              className="border-r border-b border-white/10 px-6 py-10 text-center"
             >
               <p className="text-[0.6rem] tracking-[0.22em] text-rose-soft uppercase">
                 {rede}
               </p>
-              <p className="mt-5 font-display text-4xl sm:text-5xl">{valor}</p>
+              <p className="mt-5 font-display text-4xl sm:text-5xl lg:text-4xl">{valor}</p>
               <p className="mt-3 text-[0.65rem] tracking-[0.18em] text-dark-muted uppercase">
                 {label}
               </p>
             </Reveal>
           ))}
         </div>
+
 
         <p className="mt-10 text-center font-display text-sm italic text-dark-muted">
           Comunidade pequena no número, gigante na confiança.
@@ -304,8 +313,8 @@ const insightsPrints: [string, string, string][] = [
 function Audiencia() {
   const { ref, seen } = useInView<HTMLDivElement>();
   return (
-    <section id="audiencia" className="bg-cream-deep px-5 py-16 sm:px-8">
-      <div className="mx-auto max-w-3xl">
+    <section id="audiencia" className="bg-cream-deep px-5 py-16 sm:px-8 lg:py-28">
+      <div className="mx-auto max-w-3xl lg:max-w-6xl">
         <Reveal className="text-center">
           <Eyebrow>Audiência</Eyebrow>
           <h2 className="mt-6 font-display text-3xl leading-[1.15] sm:text-5xl">
@@ -317,42 +326,45 @@ function Audiencia() {
           </p>
         </Reveal>
 
-        <div ref={ref} className="mt-12 space-y-6">
-          {barras.map(([label, pct]) => (
-            <div
-              key={label}
-              className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4"
-            >
-              <div className="min-w-0">
-                <p className="text-[0.62rem] tracking-[0.18em] text-muted-foreground uppercase">
-                  {label}
-                </p>
-                <div className="mt-3 h-[3px] w-full bg-border">
-                  <div
-                    className="h-full bg-rose transition-[width] duration-[1400ms] ease-out"
-                    style={{ width: seen ? `${pct}%` : "0%" }}
-                  />
+        <div className="lg:mt-6 lg:grid lg:grid-cols-[minmax(0,320px)_1fr] lg:items-center lg:gap-16">
+          <div ref={ref} className="mt-12 space-y-6 lg:mt-0">
+            {barras.map(([label, pct]) => (
+              <div
+                key={label}
+                className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4"
+              >
+                <div className="min-w-0">
+                  <p className="text-[0.62rem] tracking-[0.18em] text-muted-foreground uppercase">
+                    {label}
+                  </p>
+                  <div className="mt-3 h-[3px] w-full bg-border">
+                    <div
+                      className="h-full bg-rose transition-[width] duration-[1400ms] ease-out"
+                      style={{ width: seen ? `${pct}%` : "0%" }}
+                    />
+                  </div>
                 </div>
+                <span className="shrink-0 font-display text-lg">{pct}%</span>
               </div>
-              <span className="shrink-0 font-display text-lg">{pct}%</span>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-12 -mx-6 px-6 sm:mx-0 sm:px-0">
-          <div className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:gap-10">
-            {insightsPrints.map(([src, alt, caption], i) => (
-              <Reveal key={caption} delay={i * 110}>
-                <div className="w-[68vw] max-w-[280px] shrink-0 snap-center sm:w-[300px]">
-                  <PhoneMockup src={src} alt={alt} caption={caption} />
-                </div>
-              </Reveal>
             ))}
           </div>
-          <p className="text-center text-xs text-muted-foreground sm:hidden">
-            arraste para o lado →
-          </p>
+
+          <div className="mt-12 -mx-6 px-6 sm:mx-0 sm:px-0 lg:mt-0">
+            <div className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:gap-10 lg:justify-center lg:gap-8 lg:overflow-visible lg:pb-0">
+              {insightsPrints.map(([src, alt, caption], i) => (
+                <Reveal key={caption} delay={i * 110}>
+                  <div className="w-[68vw] max-w-[280px] shrink-0 snap-center sm:w-[300px] lg:w-[240px]">
+                    <PhoneMockup src={src} alt={alt} caption={caption} />
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+            <p className="text-center text-xs text-muted-foreground sm:hidden">
+              arraste para o lado →
+            </p>
+          </div>
         </div>
+
 
 
       </div>
@@ -362,7 +374,7 @@ function Audiencia() {
 
 function Conteudos() {
   return (
-    <section id="conteudos" className="bg-cream px-5 py-16 sm:px-8">
+    <section id="conteudos" className="bg-cream px-5 py-16 sm:px-8 lg:py-28">
       <div className="mx-auto max-w-5xl">
         <Reveal className="text-center">
           <Eyebrow>Conteúdos</Eyebrow>
@@ -412,8 +424,8 @@ const formatos = [
 
 function Parceria() {
   return (
-    <section id="parceria" className="bg-secondary px-5 py-20 sm:px-8">
-      <div className="mx-auto max-w-5xl">
+    <section id="parceria" className="bg-secondary px-5 py-20 sm:px-8 lg:py-28">
+      <div className="mx-auto max-w-5xl lg:max-w-6xl">
         <Reveal className="text-center">
           <p className="text-[0.68rem] tracking-[0.24em] text-primary uppercase">
             Formatos
@@ -425,7 +437,7 @@ function Parceria() {
           </h2>
         </Reveal>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           {formatos.map((f, i) => {
             const Icon = f.icon;
             return (
@@ -483,8 +495,8 @@ const marcas = [
 
 function Portfolio() {
   return (
-    <section id="portfolio" className="bg-cream px-5 pb-16 sm:px-8">
-      <Reveal className="mx-auto max-w-3xl text-center">
+    <section id="portfolio" className="bg-cream px-5 pb-16 sm:px-8 lg:pb-28">
+      <Reveal className="mx-auto max-w-3xl text-center lg:max-w-5xl">
         <Eyebrow>Portfólio</Eyebrow>
         <h2 className="mt-6 font-display text-3xl sm:text-4xl">
           Segmentos que combinam
@@ -493,7 +505,7 @@ function Portfolio() {
           com o meu conteúdo
         </p>
 
-        <ul className="mt-10 grid grid-cols-3 border-t border-l border-border">
+        <ul className="mt-10 grid grid-cols-3 border-t border-l border-border lg:grid-cols-6">
           {marcas.map((m) => (
             <li
               key={m}
@@ -510,7 +522,7 @@ function Portfolio() {
 
 function Contato() {
   return (
-    <section id="contato" className="band-dark relative overflow-hidden px-5 py-20 sm:px-8">
+    <section id="contato" className="band-dark relative overflow-hidden px-5 py-20 sm:px-8 lg:py-32">
       <span className="watermark">Juntos</span>
       <Reveal className="relative mx-auto max-w-2xl text-center">
         <Eyebrow>Contato</Eyebrow>
