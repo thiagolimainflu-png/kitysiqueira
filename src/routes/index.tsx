@@ -97,72 +97,77 @@ function CtaWhats({
 function Hero() {
   return (
     <section id="top" className="band-dark relative overflow-hidden">
-      <div className="img-frame relative">
-        <SmoothImage
-          src={heroImg}
-          alt="Talita Costa em blazer preto, retrato em estúdio com luz difusa"
-          priority
-          placeholder={heroThumb}
-          objectPosition="object-top"
-          wrapperClassName="h-[62vh] min-h-[380px] w-full"
-          className="h-[62vh] min-h-[380px] w-full object-cover object-top"
-        />
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-dark to-transparent" />
-      </div>
-      <div className="float-soft relative -mt-16 ml-0 w-fit bg-rose-soft px-7 py-4 text-ink shadow-[0_18px_40px_-24px_rgba(0,0,0,0.7)]">
-        <p className="font-display text-2xl leading-none">16,9K</p>
-        <p className="mt-1 text-[0.65rem] tracking-[0.18em] uppercase">
-          Seguidores
-        </p>
-      </div>
+      <div className="mx-auto lg:grid lg:min-h-[86vh] lg:max-w-7xl lg:grid-cols-[1fr_1.05fr] lg:items-center lg:gap-16 lg:px-10 lg:py-20">
+        <div className="relative lg:order-2">
+          <div className="img-frame relative">
+            <SmoothImage
+              src={heroImg}
+              alt="Talita Costa em blazer preto, retrato em estúdio com luz difusa"
+              priority
+              placeholder={heroThumb}
+              objectPosition="object-top"
+              wrapperClassName="h-[62vh] min-h-[380px] w-full lg:h-[74vh]"
+              className="h-[62vh] min-h-[380px] w-full object-cover object-top lg:h-[74vh]"
+            />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-dark to-transparent lg:hidden" />
+          </div>
+          <div className="float-soft relative -mt-16 ml-0 w-fit bg-rose-soft px-7 py-4 text-ink shadow-[0_18px_40px_-24px_rgba(0,0,0,0.7)] lg:absolute lg:bottom-10 lg:-left-10 lg:mt-0">
+            <p className="font-display text-2xl leading-none">16,9K</p>
+            <p className="mt-1 text-[0.65rem] tracking-[0.18em] uppercase">
+              Seguidores
+            </p>
+          </div>
+        </div>
 
-      <div className="relative px-5 pb-16 pt-12 text-center sm:px-8">
-        <span className="watermark">Talita</span>
-        <div className="relative mx-auto max-w-3xl">
-          <Reveal delay={60}><Eyebrow>Criadora de conteúdo digital · Marketing &amp; vida real</Eyebrow></Reveal>
-          <Reveal delay={160}><h1 className="mt-6 font-display text-4xl leading-[1.12] sm:text-6xl">
-            Conteúdo estratégico e autêntico que{" "}
-            <em className="italic text-rose-soft">gera resultado.</em>
-          </h1></Reveal>
-          <Reveal delay={260}><p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-dark-muted sm:text-base">
-            Oii, Mermãs! Sou Talita Costa, de Pres. Figueiredo (AM). Crio
-            conteúdo real, com uma comunidade que acompanha de perto e confia no
-            que eu indico.
-          </p></Reveal>
+        <div className="relative px-5 pb-16 pt-12 text-center sm:px-8 lg:order-1 lg:px-0 lg:py-0 lg:text-left">
+          <span className="watermark">Talita</span>
+          <div className="relative mx-auto max-w-3xl lg:mx-0">
+            <Reveal delay={60}><Eyebrow>Criadora de conteúdo digital · Marketing &amp; vida real</Eyebrow></Reveal>
+            <Reveal delay={160}><h1 className="mt-6 font-display text-4xl leading-[1.12] sm:text-6xl lg:text-[4.25rem]">
+              Conteúdo estratégico e autêntico que{" "}
+              <em className="italic text-rose-soft">gera resultado.</em>
+            </h1></Reveal>
+            <Reveal delay={260}><p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-dark-muted sm:text-base lg:mx-0 lg:max-w-lg">
+              Oii, Mermãs! Sou Talita Costa, de Pres. Figueiredo (AM). Crio
+              conteúdo real, com uma comunidade que acompanha de perto e confia no
+              que eu indico.
+            </p></Reveal>
 
 
-          <Reveal delay={340} className="mx-auto mt-10 flex max-w-sm flex-col gap-3">
-            <CtaWhats className="bg-rose text-white">
-              Quero anunciar com você
-            </CtaWhats>
-            <a
-              href="#numeros"
-              className="btn-sheen block w-full border border-white/35 px-6 py-4 text-center text-xs font-semibold tracking-[0.2em] uppercase"
-            >
-              Ver resultados
-            </a>
-          </Reveal>
+            <Reveal delay={340} className="mx-auto mt-10 flex max-w-sm flex-col gap-3 lg:mx-0 lg:max-w-xl lg:flex-row">
+              <CtaWhats className="bg-rose text-white">
+                Quero anunciar com você
+              </CtaWhats>
+              <a
+                href="#numeros"
+                className="btn-sheen block w-full border border-white/35 px-6 py-4 text-center text-xs font-semibold tracking-[0.2em] uppercase"
+              >
+                Ver resultados
+              </a>
+            </Reveal>
 
-          <Reveal as="dl" delay={440} className="mt-14 grid grid-cols-3 gap-2">
-            {[
-              ["16,9 mil", "Seguidores"],
-              ["1.650", "Publicações"],
-              ["6.001", "Seguindo"],
-            ].map(([n, l]) => (
+            <Reveal as="dl" delay={440} className="mt-14 grid grid-cols-3 gap-2 lg:max-w-xl lg:gap-6">
+              {[
+                ["16,9 mil", "Seguidores"],
+                ["1.650", "Publicações"],
+                ["6.001", "Seguindo"],
+              ].map(([n, l]) => (
 
-              <div key={l}>
-                <dt className="font-display text-2xl sm:text-3xl">{n}</dt>
-                <dd className="mt-2 text-[0.6rem] tracking-[0.18em] text-dark-muted uppercase">
-                  {l}
-                </dd>
-              </div>
-            ))}
-          </Reveal>
+                <div key={l}>
+                  <dt className="font-display text-2xl sm:text-3xl">{n}</dt>
+                  <dd className="mt-2 text-[0.6rem] tracking-[0.18em] text-dark-muted uppercase">
+                    {l}
+                  </dd>
+                </div>
+              ))}
+            </Reveal>
+          </div>
         </div>
       </div>
     </section>
   );
 }
+
 
 function Sobre() {
   const tags = ["Life Style", "Moda", "Beleza", "Maternidade"];
