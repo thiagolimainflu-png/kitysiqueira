@@ -1,35 +1,55 @@
-const POST_URLS = [
-  "https://www.instagram.com/p/Dbqg6dFxS2j/",
-  "https://www.instagram.com/p/DbonYkexNmW/",
-  "https://www.instagram.com/p/DbYz2cSx7Hz/",
-  "https://www.instagram.com/p/DbW0JASxYI4/",
-  "https://www.instagram.com/p/DbMSwFUquac/",
-  "https://www.instagram.com/p/DbD0D4JxdL_/",
+import p1 from "@/assets/post-Dbqg6dFxS2j.jpg.asset.json";
+import p2 from "@/assets/post-DbonYkexNmW.jpg.asset.json";
+import p3 from "@/assets/post-DbYz2cSx7Hz.jpg.asset.json";
+import p4 from "@/assets/post-DbW0JASxYI4.jpg.asset.json";
+import p5 from "@/assets/post-DbMSwFUquac.jpg.asset.json";
+import p6 from "@/assets/post-DbD0D4JxdL_.jpg.asset.json";
+
+const POSTS = [
+  { src: p1.url, href: "https://www.instagram.com/p/Dbqg6dFxS2j/" },
+  { src: p2.url, href: "https://www.instagram.com/p/DbonYkexNmW/" },
+  { src: p3.url, href: "https://www.instagram.com/p/DbYz2cSx7Hz/" },
+  { src: p4.url, href: "https://www.instagram.com/p/DbW0JASxYI4/" },
+  { src: p5.url, href: "https://www.instagram.com/p/DbMSwFUquac/" },
+  { src: p6.url, href: "https://www.instagram.com/p/DbD0D4JxdL_/" },
 ];
 
 export function InstagramPosts() {
   return (
-    <div className="-mx-6 px-6 sm:mx-0 sm:px-0">
-      <div className="flex snap-x snap-mandatory gap-5 overflow-x-auto pb-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:grid sm:grid-cols-3 sm:gap-6 sm:overflow-visible">
-        {POST_URLS.map((url) => (
-          <div
-            key={url}
-            className="w-[78vw] max-w-[340px] shrink-0 snap-center overflow-hidden rounded-2xl border border-border bg-background shadow-sm sm:w-auto sm:max-w-none"
+    <div>
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5">
+        {POSTS.map((post, i) => (
+          <a
+            key={post.href}
+            href={post.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative block aspect-[4/5] overflow-hidden rounded-sm bg-secondary"
           >
-            <iframe
-              src={`${url}embed/captioned/`}
-              title="Publicação no Instagram"
+            <img
+              src={post.src}
+              alt={`Publicação ${i + 1} de Talita Costa no Instagram`}
               loading="lazy"
-              scrolling="no"
-              allowTransparency
-              className="h-[560px] w-full border-0"
+              className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
             />
-          </div>
+            <span className="absolute left-3 top-3 rounded-sm bg-dark/55 px-2 py-1 text-[0.55rem] font-medium tracking-[0.18em] text-cream uppercase backdrop-blur-sm">
+              Post
+            </span>
+            <span className="pointer-events-none absolute inset-0 bg-dark/0 transition-colors duration-500 group-hover:bg-dark/15" />
+          </a>
         ))}
       </div>
-      <p className="text-center text-xs text-muted-foreground sm:hidden">
-        arraste para o lado →
-      </p>
+
+      <div className="mt-8 text-center">
+        <a
+          href="https://www.instagram.com/eu.talitaacosta/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-rose underline-offset-4 hover:underline"
+        >
+          Ver perfil completo no Instagram ↗
+        </a>
+      </div>
     </div>
   );
 }
