@@ -6,9 +6,10 @@ import { Reveal } from "@/components/Reveal";
 import { SmoothImage } from "@/components/SmoothImage";
 import { SiteHeader } from "@/components/SiteHeader";
 import { WhatsAppFab, WHATSAPP_URL } from "@/components/WhatsAppFab";
-import heroImg from "@/assets/hero-katy.jpg";
-import heroThumb from "@/assets/hero-katy-thumb.jpg";
-import sobreImg from "@/assets/sobre-katy.jpg";
+import heroImg from "@/assets/hero-casal.jpg";
+import heroThumb from "@/assets/hero-casal-thumb.jpg";
+import sobreKaty from "@/assets/sobre-katy.jpg";
+import sobreFabio from "@/assets/sobre-fabio.jpg";
 import { PhoneMockup } from "@/components/PhoneMockup";
 import { InstagramPosts } from "@/components/InstagramPosts";
 import insightsGeral from "@/assets/insights-geral.jpg";
@@ -21,20 +22,20 @@ const TELEFONE = "(84) 9109-2827 · publis e parcerias";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Katy (@katysiqueiraa) | Criadora de Conteúdo Digital" },
+      { title: "Katy & Fábio | Casal Criador de Conteúdo Digital" },
       {
         name: "description",
         content:
-          "Katy (@katysiqueiraa): 70 mil seguidores no Instagram, 649 publicações e embaixadora @sheinofficial. Publis e parcerias com conteúdo autêntico.",
+          "Katy (@katysiqueiraa) e Fábio (@fabiolimaaoficial): mais de 116 mil seguidores somados. Humor nordestino, rotina real e parcerias com marcas.",
       },
       {
         property: "og:title",
-        content: "Katy (@katysiqueiraa) | Criadora de Conteúdo Digital",
+        content: "Katy & Fábio | Casal Criador de Conteúdo Digital",
       },
       {
         property: "og:description",
         content:
-          "Bom dia, lindriiinhas! Criadora de conteúdo digital com 70 mil seguidores e 649 publicações no Instagram. Embaixadora @sheinofficial.",
+          "Bom dia, lindriiinhas! O casal Katy e Fábio soma 116 mil seguidores no Instagram com humor nordestino e conteúdo do dia a dia.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -101,7 +102,7 @@ function Hero() {
           <div className="img-frame relative">
             <SmoothImage
               src={heroImg}
-              alt="Katy (@katysiqueiraa), criadora de conteúdo digital"
+              alt="Katy e Fábio, casal criador de conteúdo digital"
               priority
               placeholder={heroThumb}
               objectPosition="object-top"
@@ -111,9 +112,9 @@ function Hero() {
             <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-dark to-transparent lg:hidden" />
           </div>
           <div className="float-soft relative -mt-16 ml-0 w-fit bg-rose-soft px-7 py-4 text-ink shadow-[0_18px_40px_-24px_rgba(0,0,0,0.7)] lg:absolute lg:bottom-10 lg:-left-10 lg:mt-0">
-            <p className="font-display text-2xl leading-none">70K</p>
+            <p className="font-display text-2xl leading-none">116K</p>
             <p className="mt-1 text-[0.65rem] tracking-[0.18em] uppercase">
-              Seguidores
+              Seguidores somados
             </p>
           </div>
         </div>
@@ -121,15 +122,15 @@ function Hero() {
         <div className="relative px-5 pb-16 pt-12 text-center sm:px-8 lg:order-1 lg:px-0 lg:py-0 lg:text-left">
           <span className="watermark">Katy</span>
           <div className="relative mx-auto max-w-3xl lg:mx-0">
-            <Reveal delay={60}><Eyebrow>Criadora de conteúdo digital · Embaixadora @sheinofficial</Eyebrow></Reveal>
+            <Reveal delay={60}><Eyebrow>Casal criador de conteúdo · @katysiqueiraa + @fabiolimaaoficial</Eyebrow></Reveal>
             <Reveal delay={160}><h1 className="mt-6 font-display text-4xl leading-[1.12] sm:text-6xl lg:text-[4.25rem]">
-              Bom dia, lindriiinhas! Conteúdo que{" "}
-              <em className="italic text-rose-soft">conecta de verdade.</em>
+              Katy & Fábio: humor e rotina que{" "}
+              <em className="italic text-rose-soft">conectam de verdade.</em>
             </h1></Reveal>
             <Reveal delay={260}><p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-dark-muted sm:text-base lg:mx-0 lg:max-w-lg">
-              Sou a Katy, criadora de conteúdo digital. Aqui é @katysiqueiraa:
-              uma comunidade de 70 mil seguidores que acompanha o dia a dia e
-              confia no que eu indico.
+              Somos Katy e Fábio, casal de criadores de conteúdo digital.
+              Juntos somamos 116 mil seguidores que acompanham nossa rotina,
+              riem com a gente e confiam no que indicamos.
             </p></Reveal>
 
 
@@ -147,8 +148,8 @@ function Hero() {
 
             <Reveal as="dl" delay={440} className="mt-14 grid grid-cols-3 gap-2 lg:max-w-xl lg:gap-6">
               {[
-                ["70 mil", "Seguidores"],
-                ["649", "Publicações"],
+                ["70,6 mil", "Katy"],
+                ["46 mil", "Fábio"],
                 ["Shein", "Embaixadora"],
               ].map(([n, l]) => (
 
@@ -169,47 +170,61 @@ function Hero() {
 
 
 function Sobre() {
-  const tags = ["Life Style", "Moda", "Beleza", "Maternidade"];
+  const tags = ["Humor", "Life Style", "Moda", "Beleza", "Casal", "Nordeste"];
   return (
     <section id="sobre" className="bg-cream px-5 py-16 sm:px-8 lg:py-28">
       <div className="mx-auto max-w-3xl lg:grid lg:max-w-6xl lg:grid-cols-2 lg:items-start lg:gap-16">
         <div className="lg:sticky lg:top-28">
-          <Reveal variant="scale" className="img-frame">
-            <SmoothImage
-              src={sobreImg}
-              alt="Katy (@katysiqueiraa), criadora de conteúdo digital"
-              ratio="1 / 1"
-              className="w-full object-cover"
-            />
-          </Reveal>
+          <div className="grid grid-cols-2 gap-3">
+            <Reveal variant="scale" className="img-frame">
+              <SmoothImage
+                src={sobreKaty}
+                alt="Katy (@katysiqueiraa), criadora de conteúdo digital"
+                ratio="1 / 1"
+                className="w-full object-cover"
+              />
+            </Reveal>
+            <Reveal variant="scale" delay={100} className="img-frame">
+              <SmoothImage
+                src={sobreFabio}
+                alt="Fábio (@fabiolimaaoficial), criador de conteúdo digital"
+                ratio="1 / 1"
+                className="w-full object-cover"
+              />
+            </Reveal>
+          </div>
           <Reveal as="figure" delay={120} className="bg-card px-6 py-7 shadow-[0_10px_30px_-24px_rgba(0,0,0,0.5)]">
             <blockquote className="font-display text-base italic">
-              &ldquo;BOM DIA LINDRIIINHAS 😍&rdquo;
+              &ldquo;BOM DIA LINDRIIINHAS 😍&rdquo; · &ldquo;2026 é dos
+              Lindrinhos!&rdquo;
             </blockquote>
           </Reveal>
         </div>
 
         <Reveal className="mt-14 lg:mt-0">
 
-          <Eyebrow>Quem sou</Eyebrow>
+          <Eyebrow>Quem somos</Eyebrow>
           <h2 className="mt-6 font-display text-3xl leading-[1.15] sm:text-5xl">
-            Mais do que uma criadora.{" "}
-            <em className="italic text-rose">Uma amiga do público.</em>
+            Mais do que um casal.{" "}
+            <em className="italic text-rose">Dois amigos do público.</em>
           </h2>
           <div className="mt-7 space-y-5 text-sm leading-loose text-muted-foreground sm:text-base">
             <p>
-              Katy, criadora de conteúdo digital. No perfil @katysiqueiraa o
-              bom humor é marca registrada: &ldquo;Tá pensando que eu sou
-              cachorra é Fábio?&rdquo; 🐶
+              <strong className="text-ink">Katy (@katysiqueiraa)</strong> —
+              criadora de conteúdo digital, embaixadora da @sheinofficial.
+              Bom humor é marca registrada: &ldquo;Tá pensando que eu sou
+              cachorra é Fábio?&rdquo; 🐶 São 654 publicações e 70,6 mil
+              seguidores.
             </p>
             <p>
-              Embaixadora da @sheinofficial, faz divulgações e parcerias com
-              marcas ao longo da rotina, sempre com o jeitinho que a comunidade
-              já conhece.
+              <strong className="text-ink">Fábio (@fabiolimaaoficial)</strong> —
+              criador de conteúdo digital, nordestino, manicaca e humor.
+              &ldquo;Sou o Cachorro Preso.&rdquo; São 578 publicações e 46 mil
+              seguidores.
             </p>
             <p>
-              São 649 publicações e stories diários 🚀 para 70 mil seguidores
-              que acompanham de perto.
+              Juntos, gravam a rotina do casal, recebidos e parcerias — com
+              stories diários 🚀 e alcance somado de mais de 116 mil pessoas.
             </p>
           </div>
 
@@ -230,11 +245,12 @@ function Sobre() {
 }
 
 const numeros: [string, string, string][] = [
-  ["Instagram", "70 mil", "Seguidores"],
-  ["Instagram", "649", "Publicações"],
-  ["Instagram · Stories", "Diários", "Conteúdo no dia a dia 🚀"],
+  ["Katy · @katysiqueiraa", "70,6 mil", "Seguidores"],
+  ["Fábio · @fabiolimaaoficial", "46 mil", "Seguidores"],
+  ["Casal", "1.232", "Publicações somadas"],
   ["Parcerias", "Shein", "Embaixadora oficial"],
 ];
+
 
 
 function Numeros() {
@@ -273,7 +289,7 @@ function Numeros() {
 
 
         <p className="mt-10 text-center font-display text-sm italic text-dark-muted">
-          Comunidade pequena no número, gigante na confiança.
+          Duas comunidades, uma só confiança.
         </p>
 
       </div>
@@ -378,7 +394,7 @@ function Conteudos() {
             Destaques <em className="italic text-rose">recentes</em>
           </h2>
           <p className="mt-4 text-sm text-muted-foreground">
-            Publicações reais do perfil, com entrega orgânica e engajamento consistente.
+            Publicações reais do casal, com entrega orgânica e engajamento consistente.
           </p>
         </Reveal>
 
@@ -413,7 +429,7 @@ const formatos = [
   {
     icon: Star,
     title: "Combo Completo",
-    desc: "Pacote personalizado combinando Stories + Reels + Post, com cobertura completa e maior impacto.",
+    desc: "Pacote do casal combinando Stories + Reels + Post nos dois perfis, com cobertura completa e maior impacto.",
     recommended: true,
   },
 ];
@@ -528,7 +544,7 @@ function Contato() {
         </h2>
         <p className="mx-auto mt-7 max-w-md text-sm leading-loose text-dark-muted">
           Marcas não compram posts — compram impacto. Vamos conversar sobre como
-          posso gerar resultados reais para a sua marca.
+          podemos gerar resultados reais para a sua marca.
         </p>
 
         <div className="mx-auto mt-12 flex max-w-md flex-col gap-3">
@@ -559,9 +575,9 @@ function Contato() {
 function Footer() {
   return (
     <footer className="bg-[#0d0b0b] px-5 py-14 text-center sm:px-8">
-      <p className="font-display text-2xl text-dark-muted">katysiqueiraa</p>
+      <p className="font-display text-2xl text-dark-muted">Katy & Fábio</p>
       <p className="mt-6 text-xs text-dark-muted/70">
-        © 2026 katysiqueiraa · Todos os direitos reservados
+        © 2026 katysiqueiraa · fabiolimaaoficial · Todos os direitos reservados
       </p>
       <div className="mt-6 flex justify-center gap-8 text-[0.62rem] tracking-[0.22em] text-dark-muted/70 uppercase [&_a]:transition-colors [&_a:hover]:text-dark-foreground">
         <a
@@ -569,7 +585,14 @@ function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Instagram
+          Instagram Katy
+        </a>
+        <a
+          href="https://www.instagram.com/fabiolimaaoficial/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram Fábio
         </a>
         <a
           href="https://www.threads.com/@katysiqueiraa?xmt=AQG09iLIRBsPvdFzy1IlK3v67H5H2agCk2GTQlmdPeYZs2M"

@@ -1,17 +1,17 @@
-import p1 from "@/assets/post-katy-1.jpg";
-import p2 from "@/assets/post-katy-2.jpg";
-import p3 from "@/assets/post-katy-3.jpg";
-import p4 from "@/assets/post-katy-4.jpg";
-import p5 from "@/assets/post-katy-5.jpg";
-import p6 from "@/assets/post-katy-6.jpg";
+import p1 from "@/assets/post-casal-1.jpg";
+import p2 from "@/assets/post-casal-2.jpg";
+import p3 from "@/assets/post-casal-3.jpg";
+import p4 from "@/assets/post-casal-4.jpg";
+import p5 from "@/assets/post-casal-5.jpg";
+import p6 from "@/assets/post-casal-6.jpg";
 
 const POSTS = [
-  { src: p1, href: "https://www.instagram.com/p/Db0peaQTyAL/" },
-  { src: p2, href: "https://www.instagram.com/p/DbyomkkzK1Y/" },
-  { src: p3, href: "https://www.instagram.com/katysiqueiraa/reel/DDDDXr5SP2c/" },
-  { src: p4, href: "https://www.instagram.com/katysiqueiraa/reel/Db3ZIYZzD6B/" },
-  { src: p5, href: "https://www.instagram.com/katysiqueiraa/reel/Db23QQnz7eI/" },
-  { src: p6, href: "https://www.instagram.com/katysiqueiraa/p/Db1v3_hlA1S/" },
+  { src: p1, href: "https://www.instagram.com/p/Db6gHQlTSLe/" },
+  { src: p2, href: "https://www.instagram.com/p/Db5ewPiTsvU/" },
+  { src: p3, href: "https://www.instagram.com/p/Db3ZIYZzD6B/" },
+  { src: p4, href: "https://www.instagram.com/p/Db23QQnz7eI/" },
+  { src: p5, href: "https://www.instagram.com/p/Db0peaQTyAL/" },
+  { src: p6, href: "https://www.instagram.com/p/Db0PqYdzFcY/" },
 ];
 
 export function InstagramPosts() {
@@ -28,7 +28,7 @@ export function InstagramPosts() {
           >
             <img
               src={post.src}
-              alt={`Publicação ${i + 1} de Katy (@katysiqueiraa) no Instagram`}
+              alt={`Publicação ${i + 1} de Katy e Fábio no Instagram`}
               loading="lazy"
               className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
             />
@@ -40,14 +40,22 @@ export function InstagramPosts() {
         ))}
       </div>
 
-      <div className="mt-8 text-center">
+      <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-rose">
         <a
           href="https://www.instagram.com/katysiqueiraa/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm text-rose underline-offset-4 hover:underline"
+          className="underline-offset-4 hover:underline"
         >
-          Ver perfil completo no Instagram ↗
+          @katysiqueiraa ↗
+        </a>
+        <a
+          href="https://www.instagram.com/fabiolimaaoficial/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline-offset-4 hover:underline"
+        >
+          @fabiolimaaoficial ↗
         </a>
       </div>
     </div>
