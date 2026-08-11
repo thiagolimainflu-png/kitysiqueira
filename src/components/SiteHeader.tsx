@@ -36,7 +36,7 @@ export function SiteHeader() {
             solid || open ? "text-ink" : "text-dark-foreground"
           }`}
         >
-          katysiqueiraa
+          Katy &amp; Fábio
         </a>
         <button
           type="button"
