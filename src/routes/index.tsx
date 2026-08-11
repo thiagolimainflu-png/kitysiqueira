@@ -289,7 +289,7 @@ function Numeros() {
 
 
         <p className="mt-10 text-center font-display text-sm italic text-dark-muted">
-          Comunidade pequena no número, gigante na confiança.
+          Duas comunidades, uma só confiança.
         </p>
 
       </div>
@@ -394,7 +394,7 @@ function Conteudos() {
             Destaques <em className="italic text-rose">recentes</em>
           </h2>
           <p className="mt-4 text-sm text-muted-foreground">
-            Publicações reais do perfil, com entrega orgânica e engajamento consistente.
+            Publicações reais do casal, com entrega orgânica e engajamento consistente.
           </p>
         </Reveal>
 
@@ -429,7 +429,7 @@ const formatos = [
   {
     icon: Star,
     title: "Combo Completo",
-    desc: "Pacote personalizado combinando Stories + Reels + Post, com cobertura completa e maior impacto.",
+    desc: "Pacote do casal combinando Stories + Reels + Post nos dois perfis, com cobertura completa e maior impacto.",
     recommended: true,
   },
 ];
@@ -544,7 +544,7 @@ function Contato() {
         </h2>
         <p className="mx-auto mt-7 max-w-md text-sm leading-loose text-dark-muted">
           Marcas não compram posts — compram impacto. Vamos conversar sobre como
-          posso gerar resultados reais para a sua marca.
+          podemos gerar resultados reais para a sua marca.
         </p>
 
         <div className="mx-auto mt-12 flex max-w-md flex-col gap-3">
@@ -575,9 +575,9 @@ function Contato() {
 function Footer() {
   return (
     <footer className="bg-[#0d0b0b] px-5 py-14 text-center sm:px-8">
-      <p className="font-display text-2xl text-dark-muted">katysiqueiraa</p>
+      <p className="font-display text-2xl text-dark-muted">Katy & Fábio</p>
       <p className="mt-6 text-xs text-dark-muted/70">
-        © 2026 katysiqueiraa · Todos os direitos reservados
+        © 2026 katysiqueiraa · fabiolimaaoficial · Todos os direitos reservados
       </p>
       <div className="mt-6 flex justify-center gap-8 text-[0.62rem] tracking-[0.22em] text-dark-muted/70 uppercase [&_a]:transition-colors [&_a:hover]:text-dark-foreground">
         <a
@@ -585,7 +585,14 @@ function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Instagram
+          Instagram Katy
+        </a>
+        <a
+          href="https://www.instagram.com/fabiolimaaoficial/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram Fábio
         </a>
         <a
           href="https://www.threads.com/@katysiqueiraa?xmt=AQG09iLIRBsPvdFzy1IlK3v67H5H2agCk2GTQlmdPeYZs2M"
