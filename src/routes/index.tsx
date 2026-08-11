@@ -22,20 +22,20 @@ const TELEFONE = "(84) 9109-2827 · publis e parcerias";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Katy (@katysiqueiraa) | Criadora de Conteúdo Digital" },
+      { title: "Katy & Fábio | Casal Criador de Conteúdo Digital" },
       {
         name: "description",
         content:
-          "Katy (@katysiqueiraa): 70 mil seguidores no Instagram, 649 publicações e embaixadora @sheinofficial. Publis e parcerias com conteúdo autêntico.",
+          "Katy (@katysiqueiraa) e Fábio (@fabiolimaaoficial): mais de 116 mil seguidores somados. Humor nordestino, rotina real e parcerias com marcas.",
       },
       {
         property: "og:title",
-        content: "Katy (@katysiqueiraa) | Criadora de Conteúdo Digital",
+        content: "Katy & Fábio | Casal Criador de Conteúdo Digital",
       },
       {
         property: "og:description",
         content:
-          "Bom dia, lindriiinhas! Criadora de conteúdo digital com 70 mil seguidores e 649 publicações no Instagram. Embaixadora @sheinofficial.",
+          "Bom dia, lindriiinhas! O casal Katy e Fábio soma 116 mil seguidores no Instagram com humor nordestino e conteúdo do dia a dia.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -102,7 +102,7 @@ function Hero() {
           <div className="img-frame relative">
             <SmoothImage
               src={heroImg}
-              alt="Katy (@katysiqueiraa), criadora de conteúdo digital"
+              alt="Katy e Fábio, casal criador de conteúdo digital"
               priority
               placeholder={heroThumb}
               objectPosition="object-top"
@@ -112,9 +112,9 @@ function Hero() {
             <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-dark to-transparent lg:hidden" />
           </div>
           <div className="float-soft relative -mt-16 ml-0 w-fit bg-rose-soft px-7 py-4 text-ink shadow-[0_18px_40px_-24px_rgba(0,0,0,0.7)] lg:absolute lg:bottom-10 lg:-left-10 lg:mt-0">
-            <p className="font-display text-2xl leading-none">70K</p>
+            <p className="font-display text-2xl leading-none">116K</p>
             <p className="mt-1 text-[0.65rem] tracking-[0.18em] uppercase">
-              Seguidores
+              Seguidores somados
             </p>
           </div>
         </div>
@@ -122,15 +122,15 @@ function Hero() {
         <div className="relative px-5 pb-16 pt-12 text-center sm:px-8 lg:order-1 lg:px-0 lg:py-0 lg:text-left">
           <span className="watermark">Katy</span>
           <div className="relative mx-auto max-w-3xl lg:mx-0">
-            <Reveal delay={60}><Eyebrow>Criadora de conteúdo digital · Embaixadora @sheinofficial</Eyebrow></Reveal>
+            <Reveal delay={60}><Eyebrow>Casal criador de conteúdo · @katysiqueiraa + @fabiolimaaoficial</Eyebrow></Reveal>
             <Reveal delay={160}><h1 className="mt-6 font-display text-4xl leading-[1.12] sm:text-6xl lg:text-[4.25rem]">
-              Bom dia, lindriiinhas! Conteúdo que{" "}
-              <em className="italic text-rose-soft">conecta de verdade.</em>
+              Katy & Fábio: humor e rotina que{" "}
+              <em className="italic text-rose-soft">conectam de verdade.</em>
             </h1></Reveal>
             <Reveal delay={260}><p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-dark-muted sm:text-base lg:mx-0 lg:max-w-lg">
-              Sou a Katy, criadora de conteúdo digital. Aqui é @katysiqueiraa:
-              uma comunidade de 70 mil seguidores que acompanha o dia a dia e
-              confia no que eu indico.
+              Somos Katy e Fábio, casal de criadores de conteúdo digital.
+              Juntos somamos 116 mil seguidores que acompanham nossa rotina,
+              riem com a gente e confiam no que indicamos.
             </p></Reveal>
 
 
@@ -148,8 +148,8 @@ function Hero() {
 
             <Reveal as="dl" delay={440} className="mt-14 grid grid-cols-3 gap-2 lg:max-w-xl lg:gap-6">
               {[
-                ["70 mil", "Seguidores"],
-                ["649", "Publicações"],
+                ["70,6 mil", "Katy"],
+                ["46 mil", "Fábio"],
                 ["Shein", "Embaixadora"],
               ].map(([n, l]) => (
 
