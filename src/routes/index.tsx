@@ -170,47 +170,61 @@ function Hero() {
 
 
 function Sobre() {
-  const tags = ["Life Style", "Moda", "Beleza", "Maternidade"];
+  const tags = ["Humor", "Life Style", "Moda", "Beleza", "Casal", "Nordeste"];
   return (
     <section id="sobre" className="bg-cream px-5 py-16 sm:px-8 lg:py-28">
       <div className="mx-auto max-w-3xl lg:grid lg:max-w-6xl lg:grid-cols-2 lg:items-start lg:gap-16">
         <div className="lg:sticky lg:top-28">
-          <Reveal variant="scale" className="img-frame">
-            <SmoothImage
-              src={sobreImg}
-              alt="Katy (@katysiqueiraa), criadora de conteúdo digital"
-              ratio="1 / 1"
-              className="w-full object-cover"
-            />
-          </Reveal>
+          <div className="grid grid-cols-2 gap-3">
+            <Reveal variant="scale" className="img-frame">
+              <SmoothImage
+                src={sobreKaty}
+                alt="Katy (@katysiqueiraa), criadora de conteúdo digital"
+                ratio="1 / 1"
+                className="w-full object-cover"
+              />
+            </Reveal>
+            <Reveal variant="scale" delay={100} className="img-frame">
+              <SmoothImage
+                src={sobreFabio}
+                alt="Fábio (@fabiolimaaoficial), criador de conteúdo digital"
+                ratio="1 / 1"
+                className="w-full object-cover"
+              />
+            </Reveal>
+          </div>
           <Reveal as="figure" delay={120} className="bg-card px-6 py-7 shadow-[0_10px_30px_-24px_rgba(0,0,0,0.5)]">
             <blockquote className="font-display text-base italic">
-              &ldquo;BOM DIA LINDRIIINHAS 😍&rdquo;
+              &ldquo;BOM DIA LINDRIIINHAS 😍&rdquo; · &ldquo;2026 é dos
+              Lindrinhos!&rdquo;
             </blockquote>
           </Reveal>
         </div>
 
         <Reveal className="mt-14 lg:mt-0">
 
-          <Eyebrow>Quem sou</Eyebrow>
+          <Eyebrow>Quem somos</Eyebrow>
           <h2 className="mt-6 font-display text-3xl leading-[1.15] sm:text-5xl">
-            Mais do que uma criadora.{" "}
-            <em className="italic text-rose">Uma amiga do público.</em>
+            Mais do que um casal.{" "}
+            <em className="italic text-rose">Dois amigos do público.</em>
           </h2>
           <div className="mt-7 space-y-5 text-sm leading-loose text-muted-foreground sm:text-base">
             <p>
-              Katy, criadora de conteúdo digital. No perfil @katysiqueiraa o
-              bom humor é marca registrada: &ldquo;Tá pensando que eu sou
-              cachorra é Fábio?&rdquo; 🐶
+              <strong className="text-ink">Katy (@katysiqueiraa)</strong> —
+              criadora de conteúdo digital, embaixadora da @sheinofficial.
+              Bom humor é marca registrada: &ldquo;Tá pensando que eu sou
+              cachorra é Fábio?&rdquo; 🐶 São 654 publicações e 70,6 mil
+              seguidores.
             </p>
             <p>
-              Embaixadora da @sheinofficial, faz divulgações e parcerias com
-              marcas ao longo da rotina, sempre com o jeitinho que a comunidade
-              já conhece.
+              <strong className="text-ink">Fábio (@fabiolimaaoficial)</strong> —
+              criador de conteúdo digital, nordestino, manicaca e humor.
+              &ldquo;Sou o Cachorro Preso.&rdquo; São 578 publicações e 46 mil
+              seguidores.
             </p>
             <p>
-              São 649 publicações e stories diários 🚀 para 70 mil seguidores
-              que acompanham de perto.
+              Juntos, gravam a rotina do casal, recebidos e parcerias — com
+              stories diários 🚀 e alcance somado de mais de 116 mil pessoas.
             </p>
           </div>
 
@@ -231,11 +245,12 @@ function Sobre() {
 }
 
 const numeros: [string, string, string][] = [
-  ["Instagram", "70 mil", "Seguidores"],
-  ["Instagram", "649", "Publicações"],
-  ["Instagram · Stories", "Diários", "Conteúdo no dia a dia 🚀"],
+  ["Katy · @katysiqueiraa", "70,6 mil", "Seguidores"],
+  ["Fábio · @fabiolimaaoficial", "46 mil", "Seguidores"],
+  ["Casal", "1.232", "Publicações somadas"],
   ["Parcerias", "Shein", "Embaixadora oficial"],
 ];
+
 
 
 function Numeros() {
